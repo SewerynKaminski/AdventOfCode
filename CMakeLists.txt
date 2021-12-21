@@ -5,6 +5,26 @@ project(2021_day_16 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_executable(day7 year2021/day07/main.cpp
+                     year2021/day07/day_7.cpp
+                     year2021/day07/day_7.h
+                     )
+
+add_executable(day8 year2021/day08/main.cpp
+                     year2021/day08/day_8.cpp
+                     year2021/day08/day_8.h
+                     )
+
+add_executable(day9 year2021/day09/main.cpp
+                     year2021/day09/day_9.cpp
+                     year2021/day09/day_9.h
+                     )
+
+add_executable(day10 year2021/day10/main.cpp
+                     year2021/day10/day_10.cpp
+                     year2021/day10/day_10.h
+                     )
+
 
 add_executable(day11 year2021/day11/main.cpp
                      year2021/day11/day_11.cpp
@@ -41,5 +61,3 @@ add_executable(day17 year2021/day17/main.cpp
                      year2021/day17/day_17.cpp
                      year2021/day17/day_17.h
                      )
-
-
