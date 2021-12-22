@@ -67,6 +67,11 @@ add_executable(day18 year2021/day18/main.cpp
                      year2021/day18/day_18.h
                      )
                      
+add_executable(day20 year2021/day20/main.cpp
+                     year2021/day20/day_20.cpp
+                     year2021/day20/day_20.h
+                     )                                                               
+                     
 add_executable(day21 year2021/day21/main.cpp
                      year2021/day21/day_21.cpp
                      year2021/day21/day_21.h
