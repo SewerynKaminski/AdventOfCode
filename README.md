@@ -1,9 +1,7 @@
 # AdventOfCode
 <details><summary><a href="year2015">2015</a> 
-:star: :star: :star: :star: :star: 
-:star: :star: :star: :star: :star: 
-:star: :star: :star: :star: :star: 
-:star: :star: :star: :star: :star: 
+:star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
+:star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
 :star: :star: :star: :star: :star: 
 </summary>
 </details>
@@ -17,21 +15,31 @@
 <details><summary><a href="year2018">2018</a></summary>
 </details>
 
-<details><summary><a href="year2019">2019</a></summary>
+<details>
+ <summary>
+  <a href="year2019">2019</a>
+   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+   :star: :star: :star: :star: :star: :star: :star: :star: :star: 
+   ✴️ 
+ </summary>
 </details>
 
 <details>
  <summary>
   <a href="year2020">2020</a>
-   :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star:
+   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
    :star: :star: :star: :star: :star:
  </summary>
 </details>
 
-<details><summary><a href="year2021">2021</a></summary>
+<details>
+ <summary>
+  <a href="year2021">2021</a>
+  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+  :star: :star:
+ </summary>
  
   * [Day 1](year2021/day1)
   
