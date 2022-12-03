@@ -57,8 +57,8 @@
 
 <details><summary><a href="year2022">2022</a></summary>
 
-  * [Day 1](year2022/day1)
+  * [Day 1](year2022/day1) - Calorie Counting
   
-  * [Day 2](year2022/day2)
+  * [Day 2](year2022/day2) - Rock Paper Scissors
     
-  * [Day 3](year2022/day3)
+  * [Day 3](year2022/day3) - Rucksack Reorganization
