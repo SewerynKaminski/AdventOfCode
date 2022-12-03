@@ -1,5 +1,11 @@
 # AdventOfCode
-<details><summary><a href="year2015">2015</a></summary>
+<details><summary><a href="year2015">2015</a> 
+:star: :star: :star: :star: :star: 
+:star: :star: :star: :star: :star: 
+:star: :star: :star: :star: :star: 
+:star: :star: :star: :star: :star: 
+:star: :star: :star: :star: :star: 
+</summary>
 </details>
  
 <details><summary><a href="year2016">2016</a></summary>
@@ -14,7 +20,15 @@
 <details><summary><a href="year2019">2019</a></summary>
 </details>
 
-<details><summary><a href="year2020">2020</a></summary>
+<details>
+ <summary>
+  <a href="year2020">2020</a>
+   :star: :star: :star: :star: :star:
+   :star: :star: :star: :star: :star:
+   :star: :star: :star: :star: :star:
+   :star: :star: :star: :star: :star:
+   :star: :star: :star: :star: :star:
+ </summary>
 </details>
 
 <details><summary><a href="year2021">2021</a></summary>
@@ -69,10 +83,10 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a></summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star:</summary>
 
-  * [Day 1](year2022/day1) - Calorie Counting
+  * [Day 1](year2022/day1) - Calorie Counting :star:
   
-  * [Day 2](year2022/day2) - Rock Paper Scissors
+  * [Day 2](year2022/day2) - Rock Paper Scissors :star:
     
-  * [Day 3](year2022/day3) - Rucksack Reorganization
+  * [Day 3](year2022/day3) - Rucksack Reorganization :star:
