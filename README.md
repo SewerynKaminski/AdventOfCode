@@ -3,8 +3,8 @@
 
 * 2017
 
-* [2021](year2021)
-
+<details><summary><a href="year2021">2021</a></summary>
+ 
   * [Day 1](year2021/day1)
   
   * [Day 2](year2021/day2)
@@ -53,8 +53,9 @@
   
   * [Day 24](year2021/day24)
 
+ </details>
 
-* [2022](year2022)
+<details><summary><a href="year2022">2022</a></summary>
 
   * [Day 1](year2022/day1)
   
