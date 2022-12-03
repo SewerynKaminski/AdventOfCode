@@ -1,7 +1,15 @@
 # AdventOfCode
-* 2015
+<details><summary><a href="year2015">2015</a></summary>
 
-* 2017
+<details><summary><a href="year2016">2016</a></summary>
+ 
+<details><summary><a href="year2017">2017</a></summary>
+ 
+<details><summary><a href="year2018">2018</a></summary>
+ 
+<details><summary><a href="year2019">2019</a></summary>
+ 
+<details><summary><a href="year2020">2020</a></summary>
 
 <details><summary><a href="year2021">2021</a></summary>
  
