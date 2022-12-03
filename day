@@ -1,0 +1,31 @@
+#pragma once
+
+#include <string>
+#include <iostream>
+#include <sstream>
+#include <map>
+#include <unordered_map>
+#include <vector>
+#include <ranges>
+#include <fstream>
+#include <limits>
+#include <algorithm>
+#include <numeric>
+#include <ranges>
+
+#include "aoc.h"
+#include "defines"
+
+#define OUT(a) std::cout << __FUNCTION__ << ( aoc::is_test_enabled() ? "(TEST)" : "" ) << ": " << a << "\n";
+#define Range std::views::iota
+
+namespace aoc::YEAR {
+void Title();
+void year();
+}
+
+namespace aoc::YEAR::DAY {
+void day();
+void Task_1 ( std::istream& input );
+void Task_2 ( std::istream& input );
+}

@@ -1,0 +1,3 @@
+#pragma once
+#define SS(d) ""#d
+#define S(d) SS(d)
