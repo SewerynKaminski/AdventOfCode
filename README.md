@@ -17,11 +17,11 @@
   
   * [Day 6](year2021/day6)
   
-  * [Day 7](year2021/day7)
+  * [Day 7](year2021/day07)
   
-  * [Day 8](year2021/day8)
+  * [Day 8](year2021/day08)
   
-  * [Day 9](year2021/day9)
+  * [Day 9](year2021/day09)
   
   * [Day 10](year2021/day10)
   
