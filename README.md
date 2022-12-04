@@ -30,7 +30,8 @@
  <summary>
   <a href="year2019">2019</a>
    :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star: :star: :star: :star: 
+   :star: :star: :star: :star: :star: :star: :star: :star:
+   :eight_pointed_black_star: :eight_pointed_black_star: :eight_pointed_black_star:
  </summary>
  
 * [Day 1](year2019/day1) - The Tyranny of the Rocket Equation :star:
