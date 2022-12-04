@@ -2,11 +2,15 @@
 
 //---------------------------------------------------------------------------//
 namespace aoc::YEAR::DAY {
+
+//---------------------------------------------------------------------------//
+// Test data
 std::string testinput =
     R"(A Y
 B X
 C Z)";
 
+//---------------------------------------------------------------------------//
 inline std::istream& test_input() {
     static std::stringstream ss;
     return ss = std::stringstream ( testinput );;
