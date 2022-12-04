@@ -4,7 +4,7 @@
 namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-// Tset data
+// Test data
 std::string testinput (
     R"(vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
@@ -13,6 +13,7 @@ wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw)" );
 
+//---------------------------------------------------------------------------//
 inline std::istream& test_input() {
     static std::stringstream ss;
     return ss = std::stringstream ( testinput );;
