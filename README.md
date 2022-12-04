@@ -1,4 +1,4 @@
-# AdventOfCode
+# Advent Of Code
 <details><summary><a href="year2015">2015</a> 
 :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
 :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
