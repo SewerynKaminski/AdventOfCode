@@ -77,11 +77,11 @@
 
 * [Day 22](year2019/day22) - Slam Shuffle :eight_pointed_black_star:
 
-* [Day 23](year2019/day23) - Category Six :star:
+* [Day 23](year2019/day23) - Category Six
 
-* [Day 24](year2019/day24) - Planet of Discord :star:
+* [Day 24](year2019/day24) - Planet of Discord
 
-* [Day 25](year2019/day25) - Cryostasis :star:
+* [Day 25](year2019/day25) - Cryostasis
  
 </details>
 
