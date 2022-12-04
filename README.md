@@ -32,55 +32,55 @@
    :star: :star: :star: :star: :star:
  </summary>
   
-  * [Day 1](year2020/day1) Report Repair :star:
+  * [Day 1](year2020/day1) - Report Repair :star:
   
-  * [Day 2](year2020/day2) Password Philosophy :star:
+  * [Day 2](year2020/day2) - Password Philosophy :star:
     
-  * [Day 3](year2020/day3) Toboggan Trajectory :star:
+  * [Day 3](year2020/day3) - Toboggan Trajectory :star:
   
-  * [Day 4](year2020/day4) Passport Processing :star:
+  * [Day 4](year2020/day4) - Passport Processing :star:
   
-  * [Day 5](year2020/day5) Binary Boarding :star:
+  * [Day 5](year2020/day5) - Binary Boarding :star:
   
-  * [Day 6](year2020/day6) Custom Customs :star:
+  * [Day 6](year2020/day6) - Custom Customs :star:
   
-  * [Day 7](year2020/day07) Handy Haversacks :star:
+  * [Day 7](year2020/day07) - Handy Haversacks :star:
   
-  * [Day 8](year2020/day08) Handheld Halting :star:
+  * [Day 8](year2020/day08) - Handheld Halting :star:
   
-  * [Day 9](year2020/day09) Encoding Error :star:
+  * [Day 9](year2020/day09) - Encoding Error :star:
   
-  * [Day 10](year2020/day10) Adapter Array :star:
+  * [Day 10](year2020/day10) - Adapter Array :star:
   
-  * [Day 11](year2020/day11) Seating System :star:
+  * [Day 11](year2020/day11) - Seating System :star:
   
-  * [Day 12](year2020/day12) Rain Risk :star:
+  * [Day 12](year2020/day12) - Rain Risk :star:
   
-  * [Day 13](year2020/day13) Shuttle Search :star:
+  * [Day 13](year2020/day13) - Shuttle Search :star:
   
-  * [Day 14](year2020/day14) Docking Data :star:
+  * [Day 14](year2020/day14) - Docking Data :star:
   
-  * [Day 15](year2020/day15) Rambunctious Recitation :star:
+  * [Day 15](year2020/day15) - Rambunctious Recitation :star:
   
-  * [Day 16](year2020/day16) Ticket Translation :star:
+  * [Day 16](year2020/day16) - Ticket Translation :star:
   
-  * [Day 17](year2020/day17) Conway Cubes :star:
+  * [Day 17](year2020/day17) - Conway Cubes :star:
   
-  * [Day 18](year2020/day18) Operation Order :star:
+  * [Day 18](year2020/day18) - Operation Order :star:
   
-  * [Day 19](year2020/day19) Monster Messages :star:
+  * [Day 19](year2020/day19) - Monster Messages :star:
   
-  * [Day 20](year2020/day20) Jurassic Jigsaw :star:
+  * [Day 20](year2020/day20) - Jurassic Jigsaw :star:
   
-  * [Day 21](year2020/day21) Allergen Assessment :star:
+  * [Day 21](year2020/day21) - Allergen Assessment :star:
   
-  * [Day 22](year2020/day22) Crab Combat :star:
+  * [Day 22](year2020/day22) - Crab Combat :star:
   
-  * [Day 23](year2020/day23) Crab Cups :star:
+  * [Day 23](year2020/day23) - Crab Cups :star:
   
-  * [Day 24](year2020/day24) Lobby Layout :star:
+  * [Day 24](year2020/day24) - Lobby Layout :star:
   
-  * [Day 25](year2020/day25) Combo Breaker :star:
+  * [Day 25](year2020/day25) - Combo Breaker :star:
 
 </details>
 
