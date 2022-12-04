@@ -1,27 +1,88 @@
 # Advent Of Code
-<details><summary><a href="year2015">2015</a> 
-:star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
-:star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
-:star: :star: :star: :star: :star: 
-</summary>
+<details>
+    <summary>
+        <a href="year2015">2015</a> 
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
+        :star: :star: :star: :star: :star: 
+    </summary>
 </details>
  
-<details><summary><a href="year2016">2016</a></summary>
+<details>
+    <summary>
+        <a href="year2016">2016</a>
+    </summary>
 </details>
 
-<details><summary><a href="year2017">2017</a></summary>
+<details>
+    <summary>
+        <a href="year2017">2017</a>
+    </summary>
 </details>
 
-<details><summary><a href="year2018">2018</a></summary>
+<details>
+    <summary>
+        <a href="year2018">2018</a>
+    </summary>
 </details>
 
 <details>
  <summary>
   <a href="year2019">2019</a>
    :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star: :star: :star: :star: :star: 
-   ✴️ 
+   :star: :star: :star: :star: :star: :star: :star: :star: :star:
  </summary>
+ 
+* [Day 1](year2019/day1) - The Tyranny of the Rocket Equation :star:
+
+* [Day 2](year2019/day2) - 1202 Program Alarm :star:
+  
+* [Day 3](year2019/day3) - Crossed Wires :star:
+
+* [Day 4](year2019/day4) - Secure Container :star:
+
+* [Day 5](year2019/day5) - Sunny with a Chance of Asteroids :star:
+
+* [Day 6](year2019/day6) - Universal Orbit Map :star:
+
+* [Day 7](year2019/day07) - Amplification Circuit :star:
+
+* [Day 8](year2019/day08) - Space Image Format :star:
+
+* [Day 9](year2019/day09) - Sensor Boost :star:
+
+* [Day 10](year2019/day10) - Monitoring Station :star:
+
+* [Day 11](year2019/day11) - Space Police :star:
+
+* [Day 12](year2019/day12) - The N-Body Problem :star:
+
+* [Day 13](year2019/day13) - Care Package :star:
+
+* [Day 14](year2019/day14) - Space Stoichiometry :star:
+
+* [Day 15](year2019/day15) - Oxygen System :star:
+
+* [Day 16](year2019/day16) - Flawed Frequency Transmission :star:
+
+* [Day 17](year2019/day17) - Set and Forget :star:
+
+* [Day 18](year2019/day18) - Many-Worlds Interpretation :star:
+
+* [Day 19](year2019/day19) - Tractor Beam :star:
+
+* [Day 20](year2019/day20) - Donut Maze :star:
+
+* [Day 21](year2019/day21) - Springdroid Adventure :star:
+
+* [Day 22](year2019/day22) - Slam Shuffle :star:
+
+* [Day 23](year2019/day23) - Category Six :star:
+
+* [Day 24](year2019/day24) - Planet of Discord :star:
+
+* [Day 25](year2019/day25) - Cryostasis :star:
+ 
 </details>
 
 <details>
