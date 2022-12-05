@@ -6,12 +6,12 @@
 #include <map>
 #include <unordered_map>
 #include <vector>
-#include <ranges>
+#include <list>
+//#include <ranges>
 #include <fstream>
 #include <limits>
 #include <algorithm>
 #include <numeric>
-#include <ranges>
 
 #include "aoc.h"
 #include "defines"
