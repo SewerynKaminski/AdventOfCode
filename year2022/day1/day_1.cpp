@@ -61,7 +61,7 @@ void Task_2 ( std::istream& puzzle_input ) {
     }
     t.push_back ( sum );
     //std::ranges::sort ( t, std::ranges::greater() );
-    std::sort ( t.begin(), t.end(), std::ranges::greater() );
+    std::sort ( t.begin(), t.end(), std::greater() );
     ans = std::accumulate ( t.begin(), t.begin() + 3, 0 );
 
     OUT ( ans );
