@@ -21,7 +21,7 @@ bool is_test_enabled() {
 }
 
 //---------------------------------------------------------------------------//
-void run() {
+void run ( ) {
     std::ifstream f;
     YEAR::Title();
     test_disable();
