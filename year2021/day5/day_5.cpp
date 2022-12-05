@@ -45,6 +45,10 @@ bool operator== ( const Point& a, const Point& b ) {
     return a.x == b.x && a.y == b.y;
 }
 
+bool operator!= ( const Point& a, const Point& b ) {
+    return a.x != b.x || a.y != b.y;
+}
+
 struct Line {
     Point p1, p2;
 };
