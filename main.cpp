@@ -4,7 +4,7 @@
 #include <map>
 #include <unordered_map>
 #include <vector>
-#include <ranges>
+//#include <ranges>
 #include <fstream>
 #include <limits>
 
