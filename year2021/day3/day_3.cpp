@@ -64,7 +64,7 @@ auto count_ones ( std::vector<std::string>& d, int i ) {
             ret += s[i] == '1';
         }
     }
-    //return std::pair<size_t, size_t> {ret, total};
+
     return ret;
 }
 
