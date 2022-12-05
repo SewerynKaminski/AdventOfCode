@@ -14,4 +14,4 @@ include_directories(../..)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(2022_day_${DAY} ../../main.cpp ../../aoc.cpp day_${DAY}.cpp input)
+add_executable(${YEAR}_day_${DAY} ../../main.cpp ../../aoc.cpp day_${DAY}.cpp input)
