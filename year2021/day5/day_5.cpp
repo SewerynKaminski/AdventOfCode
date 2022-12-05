@@ -96,24 +96,30 @@ void Task_1 ( std::istream& puzzle_input ) {
     auto data = load ( file );
     std::unordered_map<Point, int, Hash_Point> hash;
 
-    for ( auto& line : data | std::views::filter ( isVerticalOrHorizontal ) ) {
-        //std::cout << line.p1 << "\n";
-        Point d { line.p2.x - line.p1.x, line.p2.y - line.p1.y };
-        int l = std::max ( std::abs ( d.x ), std::abs ( d.y ) );
-        if ( l > 0 ) {
-            d.x /= l;
-            d.y /= l;
+    //for ( auto& line : data | std::views::filter ( isVerticalOrHorizontal ) ) {
+    for ( auto& line : data ) {
+        if ( isVerticalOrHorizontal ( line ) ) {
+            //std::cout << line.p1 << "\n";
+            Point d { line.p2.x - line.p1.x, line.p2.y - line.p1.y };
+            int l = std::max ( std::abs ( d.x ), std::abs ( d.y ) );
+            if ( l > 0 ) {
+                d.x /= l;
+                d.y /= l;
+            }
+            for ( auto p = line.p1; p != line.p2; p += d ) {
+                //std::cout << p << "\n";
+                hash[p]++;
+            }
+            //std::cout << line.p2 << "\n";
+            hash[line.p2]++;
         }
-        for ( auto p = line.p1; p != line.p2; p += d ) {
-            //std::cout << p << "\n";
-            hash[p]++;
-        }
-        //std::cout << line.p2 << "\n";
-        hash[line.p2]++;
     }
 
     int ans = 0;
-    for ( auto v : hash | std::views::values ) {
+    //for ( auto v : hash | std::views::values ) {
+    //    ans += v > 1;
+    //};
+    for ( auto [k, v] : hash ) {
         ans += v > 1;
     };
 
