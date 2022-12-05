@@ -5,6 +5,8 @@ project(2021_day_16 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include_directories(.)
+
 add_executable(day7 year2021/day07/main.cpp
                      year2021/day07/day_7.cpp
                      year2021/day07/day_7.h
@@ -81,3 +83,55 @@ add_executable(day22 year2021/day22/main.cpp
                      year2021/day22/day_22.cpp
                      year2021/day22/day_22.h
                      )
+
+include(ExternalProject)
+
+set(YEAR 2022)
+set(DAY 1)
+ExternalProject_Add(${YEAR}_day_${DAY}
+	SOURCE_DIR ./year${YEAR}/day${DAY}/
+	PREFIX ./year${YEAR}/day${DAY}/
+	SOURCE_SUBDIR ../../../year${YEAR}/day${DAY}/
+	INSTALL_COMMAND ""
+)
+
+set(DAY 2)
+ExternalProject_Add(${YEAR}_day_${DAY} 
+	SOURCE_DIR ./year${YEAR}/day${DAY}/
+	PREFIX ./year${YEAR}/day${DAY}/
+	SOURCE_SUBDIR ../../../year${YEAR}/day${DAY}/
+	INSTALL_COMMAND ""
+)
+
+set(DAY 3)
+ExternalProject_Add(${YEAR}_day_${DAY} 
+	SOURCE_DIR ./year${YEAR}/day${DAY}/
+	PREFIX ./year${YEAR}/day${DAY}/
+	SOURCE_SUBDIR ../../../year${YEAR}/day${DAY}/
+	INSTALL_COMMAND ""
+)
+
+set(DAY 4)
+ExternalProject_Add(${YEAR}_day_${DAY} 
+	SOURCE_DIR ./year${YEAR}/day${DAY}/
+	PREFIX ./year${YEAR}/day${DAY}/
+	SOURCE_SUBDIR ../../../year${YEAR}/day${DAY}/
+	INSTALL_COMMAND ""
+)
+
+set(DAY 5)
+ExternalProject_Add(${YEAR}_day_${DAY} 
+	SOURCE_DIR ./year${YEAR}/day${DAY}/
+	PREFIX ./year${YEAR}/day${DAY}/
+	SOURCE_SUBDIR ../../../year${YEAR}/day${DAY}/
+	INSTALL_COMMAND ""
+)
+
+#include(${CMAKE_CURRENT_SOURCE_DIR}/year2022/day1/CMakeLists.txt)
+#set(YEAR 2022)
+#set(DAY 1)
+#add_compile_definitions(DAY=day_${DAY})
+#add_compile_definitions(YEAR=year_${YEAR})
+#add_executable(${YEAR}day${DAY} main.cpp aoc.cpp year${YEAR}/day${DAY}/day_${DAY}.cpp)
+
+
