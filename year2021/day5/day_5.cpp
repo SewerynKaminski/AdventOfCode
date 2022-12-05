@@ -153,7 +153,10 @@ void Task_2 ( std::istream& puzzle_input ) {
     }
 
     int ans = 0;
-    for ( auto v : hash | std::views::values ) {
+    /*for ( auto v : hash | std::views::values ) {
+        ans += v > 1;
+    }*/
+    for ( auto [k, v] : hash ) {
         ans += v > 1;
     }
 
