@@ -157,7 +157,7 @@
   * [Day 1](year2021/day1) :star:
   
   * [Day 2](year2021/day2) :star:
-    
+  
   * [Day 3](year2021/day3) :star:
   
   * [Day 4](year2021/day4) :star:
@@ -206,14 +206,16 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star:</summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
   * [Day 2](year2022/day2) - Rock Paper Scissors :star:
-    
+  
   * [Day 3](year2022/day3) - Rucksack Reorganization :star:
   
   * [Day 4](year2022/day4) - Rucksack Reorganization :star:
   
   * [Day 5](year2022/day5) - Supply Stacks :star:
+  
+  * [Day 6](year2022/day6) - Tuning Trouble :star:
