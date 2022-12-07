@@ -206,7 +206,7 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star:</summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -219,3 +219,5 @@
   * [Day 5](year2022/day5) - Supply Stacks :star:
   
   * [Day 6](year2022/day6) - Tuning Trouble :star:
+  
+  * [Day 7](year2022/day7) - No Space Left On Device :star:
