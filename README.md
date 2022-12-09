@@ -206,7 +206,7 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star:</summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -223,3 +223,5 @@
   * [Day 7](year2022/day7) - No Space Left On Device :star:
   
   * [Day 8](year2022/day8) - Treetop Tree House :star:
+  
+  * [Day 9](year2022/day9) - Rope Bridge :star:
