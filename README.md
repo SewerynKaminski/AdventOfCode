@@ -6,7 +6,6 @@
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: 
         :star: :star: :star: :star: :star: 
     </summary>
-</details>
 
 * [Day 1](year2015/day1) -  :star:
 
@@ -57,6 +56,7 @@
 * [Day 24](year2015/day24) -  :star:
 
 * [Day 25](year2015/day25) -  :star:
+</details>
 
 <details>
     <summary>
