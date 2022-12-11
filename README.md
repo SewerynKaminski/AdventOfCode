@@ -277,3 +277,5 @@
   * [Day 9](year2022/day9) - Rope Bridge :star:
   
   * [Day 10](year2022/day10) - Cathode-Ray Tube :star:
+  
+  * [Day 11](year2022/day11) - Monkey in the Middle :star:
