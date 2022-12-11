@@ -256,7 +256,7 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
