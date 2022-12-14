@@ -256,7 +256,7 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -281,3 +281,7 @@
   * [Day 11](year2022/day11) - Monkey in the Middle :star:
   
   * [Day 12](year2022/day12) - Hill Climbing Algorithm :star:
+  
+  * [Day 13](year2022/day13) - Distress Signal :star:
+  
+  * [Day 14](year2022/day14) - Regolith Reservoir :star:
