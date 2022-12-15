@@ -1,6 +1,7 @@
 #include "day"
 #include <ranges>
 #include <iomanip>
+#include <unordered_set>
 
 //---------------------------------------------------------------------------//
 namespace aoc::YEAR::DAY {
