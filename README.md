@@ -256,7 +256,7 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -285,3 +285,5 @@
   * [Day 13](year2022/day13) - Distress Signal :star:
   
   * [Day 14](year2022/day14) - Regolith Reservoir :star:
+  
+  * [Day 15](year2022/day15) - Beacon Exclusion Zone :star:

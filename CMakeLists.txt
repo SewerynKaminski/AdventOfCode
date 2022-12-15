@@ -235,6 +235,14 @@ ExternalProject_Add(${YEAR}_day_${DAY}
         INSTALL_COMMAND ""
 )
 
+set(DAY 15)
+ExternalProject_Add(${YEAR}_day_${DAY}
+        SOURCE_DIR ./year${YEAR}/day${DAY}/
+        PREFIX ./year${YEAR}/day${DAY}/
+        SOURCE_SUBDIR ../../../year${YEAR}/day${DAY}/
+        INSTALL_COMMAND ""
+)
+
 #include(${CMAKE_CURRENT_SOURCE_DIR}/year2022/day1/CMakeLists.txt)
 #set(YEAR 2022)
 #set(DAY 1)
