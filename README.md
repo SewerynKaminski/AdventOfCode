@@ -256,7 +256,7 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:</summary>
+<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :eight_pointed_black_star: :eight_pointed_black_star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -287,3 +287,9 @@
   * [Day 14](year2022/day14) - Regolith Reservoir :star:
   
   * [Day 15](year2022/day15) - Beacon Exclusion Zone :star:
+
+  * [Day 16](year2022/day16) - Proboscidea Volcanium :eight_pointed_black_star:
+
+  * [Day 17](year2022/day17) - Pyroclastic Flow :eight_pointed_black_star:
+
+  * [Day 18](year2022/day18) - Boiling Boulders :star:
