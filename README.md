@@ -293,3 +293,8 @@
   * [Day 17](year2022/day17) - Pyroclastic Flow :eight_pointed_black_star:
 
   * [Day 18](year2022/day18) - Boiling Boulders :star:
+  
+  * [Day 19](year2022/day19) - Not Enough Minerals
+  
+  * [Day 20](year2022/day20) - Grove Positioning System :star:
+  
