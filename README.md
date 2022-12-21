@@ -256,7 +256,9 @@
 
  </details>
 
-<details><summary><a href="year2022">2022</a> :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :star: :eight_pointed_black_star: :eight_pointed_black_star:</summary>
+<details><summary><a href="year2022">2022</a>
+ :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+ :star: :star: :star: :star: :star: :star: :star: :star: :eight_pointed_black_star: :eight_pointed_black_star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -297,4 +299,6 @@
   * [Day 19](year2022/day19) - Not Enough Minerals
   
   * [Day 20](year2022/day20) - Grove Positioning System :star:
+  
+  * [Day 21](year2022/day21) - Monkey Math :star:
   
