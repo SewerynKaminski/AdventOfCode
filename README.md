@@ -258,7 +258,8 @@
 
 <details><summary><a href="year2022">2022</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star: :star: :star: :star: :star: :star: :star: :star: :eight_pointed_black_star: :eight_pointed_black_star:</summary>
+ :star: :star: :star: :star: :star: :star: :star: :star: :star:
+ :eight_pointed_black_star: :eight_pointed_black_star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -302,3 +303,10 @@
   
   * [Day 21](year2022/day21) - Monkey Math :star:
   
+  * [Day 22](year2022/day22) - Monkey Map :eight_pointed_black_star:
+
+  * [Day 23](year2022/day23) - Unstable Diffusion :star:
+
+  * [Day 24](year2022/day24) - 
+
+  * [Day 25](year2022/day25) - 
