@@ -259,7 +259,7 @@
 <details><summary><a href="year2022">2022</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
  :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :eight_pointed_black_star: :eight_pointed_black_star:</summary>
+ :eight_pointed_black_star: :eight_pointed_black_star: :eight_pointed_black_star:</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
