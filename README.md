@@ -307,6 +307,6 @@
 
   * [Day 23](year2022/day23) - Unstable Diffusion :star:
 
-  * [Day 24](year2022/day24) - 
+  * [Day 24](year2022/day24) - Blizzard Basin :star:
 
   * [Day 25](year2022/day25) - 
