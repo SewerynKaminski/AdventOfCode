@@ -11,6 +11,7 @@
 #include <set>
 #include <iomanip>
 #include <queue>
+#include <algorithm>
 
 //---------------------------------------------------------------------------//
 #include "day_15.h"
