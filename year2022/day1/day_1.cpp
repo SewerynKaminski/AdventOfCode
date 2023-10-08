@@ -60,8 +60,8 @@ void Task_2 ( std::istream& puzzle_input ) {
         sum = !line.empty() ? sum + stoull ( line ) : ( t.push_back ( sum ), 0 );
     }
     t.push_back ( sum );
-    //std::ranges::sort ( t, std::ranges::greater() );
-    std::sort ( t.begin(), t.end(), std::greater() );
+    std::ranges::sort ( t, std::ranges::greater() );    // g++-12
+    //std::sort ( t.begin(), t.end(), std::greater() ); // g++-11
     ans = std::accumulate ( t.begin(), t.begin() + 3, 0 );
 
     OUT ( ans );
