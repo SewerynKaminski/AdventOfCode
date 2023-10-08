@@ -1,5 +1,6 @@
 #include "day"
 #include <ranges>
+#include <functional>
 
 //---------------------------------------------------------------------------//
 namespace aoc::YEAR::DAY {

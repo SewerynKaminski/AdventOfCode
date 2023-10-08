@@ -9,6 +9,7 @@
 #include <fstream>
 #include <limits>
 #include <set>
+#include <algorithm>
 
 //---------------------------------------------------------------------------//
 #include "day_14.h"

@@ -1,4 +1,5 @@
 #include "day"
+#include <functional>
 
 //---------------------------------------------------------------------------//
 namespace aoc::YEAR::DAY {
