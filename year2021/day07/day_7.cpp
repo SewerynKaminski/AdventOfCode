@@ -9,6 +9,7 @@
 #include <fstream>
 #include <limits>
 #include <numeric>
+#include <algorithm>
 
 //---------------------------------------------------------------------------//
 namespace aoc::year_2021::day_7 {
