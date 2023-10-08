@@ -8,6 +8,7 @@
 #include <ranges>
 #include <fstream>
 #include <limits>
+#include <algorithm>
 
 //---------------------------------------------------------------------------//
 namespace aoc::year_2021::day_8 {
