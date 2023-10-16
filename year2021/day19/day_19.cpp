@@ -2,16 +2,17 @@
 #include <string>
 #include <iostream>
 #include <sstream>
-#include <map>
+//#include <map>
 #include <unordered_map>
 #include <vector>
 #include <ranges>
 #include <fstream>
-#include <limits>
-#include <set>
+//#include <limits>
 #include <unordered_set>
-#include <iomanip>
-#include <bit>
+//#include <unordered_set>
+//#include <iomanip>
+//#include <bit>
+#include <optional>
 
 //---------------------------------------------------------------------------//
 #include "day_19.h"
@@ -46,8 +47,14 @@ struct Point3 {
         z /= v;
         return *this;
     }
+    Point3& operator- (){
+        x=-x;
+        y=-y;
+        z=-z;
+        return *this;
+    }
     uint64_t tou() {
-        return ( uint64_t ( x ) << 42 ) ^ ( uint64_t ( y ) << 21 ) ^ uint64_t ( z );
+        return ( uint64_t ( x ) << 22 ) ^ ( uint64_t ( y ) << 11 ) ^ uint64_t ( z );
     }
 };
 
@@ -81,7 +88,8 @@ struct Scanner {
     std::vector<Point3> beacons;
     Point3 min;
     Point3 max;
-    int r=0;
+    int r=-1;
+    Point3 pos{0,0,0};
 };
 
 Point3 minxyz ( const Point3& a, const Point3& b ) {
@@ -109,14 +117,15 @@ auto load ( std::string file ) {
     std::string line;
     while ( fs.good() ) {
         std::getline ( fs, line );
-        if ( line.starts_with ( "---" ) ) {
+        //if ( line.starts_with ( "---" ) ) {
+        if ( line.substr(0,3) == "---" ) {
             min.x = min.y = min.z = INT_MAX;
             max.x = max.y = max.z = INT_MIN;
             ctr.x = ctr.y = ctr.z = 0;
             //std::cout << '\n';
             data.push_back (  Scanner() );
         } else if ( !line.empty() ) {
-            int x, y, z;
+            int64_t x, y, z;
             char c;
             std::stringstream ss ( line );
             while ( ss >> x >> c >> y >> c >> z ) {
@@ -159,7 +168,6 @@ Point3 rotateX_90 ( Point3 p ) {
 Point3 rotateZ90 ( Point3 p ) {
     return {-p.y, p.x, p.z};
 }
-
 
 Point3 rotate ( int r, Point3 d ) {
     switch ( r ) {
@@ -319,10 +327,10 @@ Point3 rotate2 ( int r, Point3 d ) {
 
 int compare_scanners ( std::vector<Point3>& s1, std::vector<Point3>& s2 ) {
     int meq = 0, eq = 0;
-    for ( int i1 = 0; i1 < s1.size() ; i1++ ) {
-        for ( auto r : Range ( 0, 24 ) ) {
+    for ( size_t i1 = 0; i1 < s1.size() ; i1++ ) {
+        for ( auto r=0; r<24; r++ ) {
             eq = 0;
-            for ( int i2 = 0; i2 < s2.size() ; i2++ ) {
+            for ( size_t i2 = 0; i2 < s2.size() ; i2++ ) {
                 if ( s1[i1] == rotate ( r, s2[i2] ) ) {
                     eq++;
                 }
@@ -375,7 +383,7 @@ inline bool cmp2 ( Point3& p1, Point3& d ) {
     return p1.x == d.z && p1.y == d.x && p1.z == d.y;
 }
 std::ostream& operator <<(std::ostream& o, Point3 p){
-    o << '{'<< p.x <<',' << p.y <<','<< p.z << '}';
+    return o << '{'<< p.x <<',' << p.y <<','<< p.z << '}';
 }
 
 
@@ -431,8 +439,8 @@ std::tuple<bool, int> cmp ( Point3 p1, Point3 p2 ) {
 
 void check_scanner_pair ( std::vector<std::vector<Point3>>& data, int s1, int s2 ) {
     int sum;
-    for ( int j = 0; j < data[s2].size() ; j++ ) {
-        for ( int i = 0; i < data[s1].size() ; i++ ) {
+    for ( size_t j = 0; j < data[s2].size() ; j++ ) {
+        for ( size_t i = 0; i < data[s1].size() ; i++ ) {
             auto vs1 = data[s1];
             for ( auto& p : vs1 ) {
                 p -= data[s1][i];
@@ -444,8 +452,8 @@ void check_scanner_pair ( std::vector<std::vector<Point3>>& data, int s1, int s2
 
             sum = 0;
             int r = -1;
-            for ( int ii : Range ( 0ul, vs1.size() ) ) {
-                for ( int jj : Range ( 0ul, vs2.size() ) ) {
+            for ( size_t ii=0ul; ii< vs1.size(); ii++ ) {
+                for ( size_t jj=0ul; jj <vs2.size(); jj++ ) {
                     auto [s, rot] = cmp ( vs1[ii], vs2[jj] );
                     if ( s ) {
                         sum++;
@@ -483,66 +491,114 @@ void check_scanner_pair ( std::vector<std::vector<Point3>>& data, int s1, int s2
     }
 }
 
-int compare2 ( Scanner& a, Scanner& b ) {
+std::optional<Point3> compare2 ( Scanner& a, Scanner& b ) {
     int cnt = 0;
+    std::optional<Point3>  ret;
+    if ( a.r==-1 ) return ret;
+    if ( a.r>-1 && b.r>-1 ) return ret;
 
-    for ( int i=0; i<a.beacons.size() && cnt<12; i++ ) {
-        for ( int j=0; j<b.beacons.size() && cnt<12; j++ ) {
-            std::unordered_set<uint64_t> map;
+    for ( size_t i=0; i<a.beacons.size() && cnt<12; i++ ) {
+        for ( size_t j=0; j<b.beacons.size() && cnt<12; j++ ) {
+            std::unordered_map<uint64_t,Point3> map;
 
             a.min = a.beacons[i];
             b.min = b.beacons[j];
             for ( auto& p : a.beacons ) {
-                auto pp = p - a.min;
-                //std::cout << pp << '\n';
-                map.insert ( pp.tou() );
+                auto pp = rotate(a.r, p - a.min);
+                map[pp.tou()] = p;
+                //map.insert ( pp.tou() );
             }
-            for ( auto r : Range ( 0, 24 ) ) {
+            for ( auto r=0; r<24; r++ ) {
                 cnt = 0;
                 for ( auto& p : b.beacons ) {
                     auto pp = rotate ( r, p - b.min );
-                    cnt += map.contains ( pp.tou() );
+                    //cnt += map.contains ( pp.tou() );
+                    auto mp = map.find ( pp.tou() );
+                    cnt += map.end()!=mp;
                     if ( cnt >=12 ) {
                         // mamy pare
-                        b.r = r;
-                        auto ro = b.min;
-                        std::cout << r<< ' ' << pp - rotate(r, p) + a.min;
+                        if ( b.r==-1 ) {
+                            b.r = r;
+                            b.pos = rotate(b.r, b.min) - rotate(a.r, a.min) + a.pos;
+                            //std::cout << b.pos;
+                            ret = b.pos;
+                        }
+                        else if ( a.r==-1 ) {
+                            //a.r = r;
+                            //a.pos = -rotate(b.r, b.min) + rotate(a.r, a.min) + b.pos;
+                            //std::cout << a.pos;
+                        } else{
+                            //std::cout << a.pos << b.pos;
+                        }
+                        //std::cout << r << ' ' << pp - rotate(r, p) + a.min;
+                        //std::cout << r << ' ' << rotate(b.r, b.min) - rotate(a.r, a.min);
                         //if( )
-                        return cnt;
+                        return ret;
                     }
                 }
             }
         }
     }
-    return cnt;
+    return ret;
+}
+
+void find ( std::vector<Scanner>& data, size_t i, size_t j ) {
+    std::optional<Point3> n;
+    if( i >= data.size() ||
+        j >= data.size() ) return;
+    if ( data[i].r!=-1 && data[j].r==-1) {
+        n = compare2 ( data[i], data[j] );
+        if( n.has_value() ) {
+            std::cout << n.value() << i << ' ' << j << '\n';
+            find ( data, j, 0 );
+        }
+    }else if ( data[j].r!=-1 && data[i].r==-1) {
+        n = compare2 ( data[j], data[i] );
+        if ( n.has_value() ) {
+            std::cout << n.value() << ' ' << i << '\n';
+            find ( data, i, 0 );
+        }
+    }
+    find ( data, i, j+1 );
 }
 
 //---------------------------------------------------------------------------//
 void Task_1 ( ) {
-    std::set<Point3> ans;
-    auto data = load ( "../testinput" );
+    auto data = load (
+        //"../testinput"
+        "../input"
+        );
 
-    std::set<Point3> map1;
-    std::set<Point3> map2;
+    data[0].r=0;
+    find(data,0,1);
 
-    int n = 0;
-    for ( int i = 0; i<data.size(); i++ ) {
-        for ( int j=i+1; j<data.size(); j++ ) {
-            n = compare2 ( data[i], data[j] );
-            if ( n >= 12 ) { std::cout << i << ' ' << j << '\n';
-            //std::cout << n << '\n';
-            }
+    std::unordered_set<uint64_t> ans;
+    for ( auto& s : data ) {
+        for ( auto& b : s.beacons ) {
+            auto bp = s.pos - rotate ( s.r, b );
+            ans.insert( bp.tou() );
         }
     }
-    //std::cout << "R(" << r << ") "<< p << "\n";
 
     std::cout << __FUNCTION__ << ": " << ans.size() << '\n';
 }
 
 //---------------------------------------------------------------------------//
 void Task_2 ( ) {
-    auto ans = 0ul;
     auto data = load ( "../input" );
+
+    data[0].r=0;
+    find(data,0,1);
+
+    int64_t ans=0;
+    for ( size_t i=0; i < data.size(); i++ ) {
+        for ( size_t j=i+1; j < data.size(); j++ ) {
+            int64_t d = abs(data[i].pos.x - data[j].pos.x)
+                +abs(data[i].pos.y - data[j].pos.y)
+                     +abs(data[i].pos.z - data[j].pos.z);
+            ans = std::max(d, ans);
+        }
+    }
 
     std::cout << __FUNCTION__ << ": " << ans << '\n';
 }
@@ -551,16 +607,3 @@ void Task_2 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-/*
-S0 S1
-0 -> 10
-
-S1 S3
-10 -> 0
-
-S1 S4
-10 -> 21
-
-S2 S4
-6 <- 21
-*/
