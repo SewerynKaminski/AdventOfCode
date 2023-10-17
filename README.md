@@ -79,6 +79,7 @@
 <details>
     <summary>
         <a href="year2018">2018</a>
+        :star: :star:
     </summary>
 </details>
 
