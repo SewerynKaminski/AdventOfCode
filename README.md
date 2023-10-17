@@ -114,7 +114,7 @@
 
 * [Day 15](year2019/day15) - Oxygen System :star:
 
-* [Day 16](year2019/day16) - Flawed Frequency Transmission ⯨
+* [Day 16](year2019/day16) - Flawed Frequency Transmission 🟊
 
 * [Day 17](year2019/day17) - Set and Forget :star:
 
