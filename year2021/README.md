@@ -7,3 +7,4 @@
 # --- Day 7: [The Treachery of Whales](day07/README.md) ---
 # --- Day 8: [Seven Segment Search](day08/README.md) ---
 # --- Day 9: [Smoke Basin](day09/README.md) ---
+# --- Day 10: [Syntax Scoring](day10/README.md) ---
