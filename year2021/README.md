@@ -5,3 +5,4 @@
 # --- Day 5: [Hydrothermal Venture](day5/README.md) ---
 # --- Day 6: [Lanternfish](day6/README.md) ---
 # --- Day 7: [The Treachery of Whales](day07/README.md) ---
+# --- Day 8: [Seven Segment Search](day08/README.md) ---
