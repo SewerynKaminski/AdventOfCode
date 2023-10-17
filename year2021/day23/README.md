@@ -8,18 +8,24 @@ They give you a diagram of the situation (your puzzle input), including location
 
 For example:
 
+```
 #############
 #...........#
 ###B#C#B#D###
   #A#D#C#A#
   #########
+```
+
 The amphipods would like a method to organize every amphipod into side rooms so that each side room contains one type of amphipod and the types are sorted A-D going left to right, like this:
 
+```
 #############
 #...........#
 ###A#B#C#D###
   #A#B#C#D#
   #########
+```
+
 Amphipods can move up, down, left, or right so long as they are moving into an unoccupied open space. Each type of amphipod requires a different amount of energy to move one step: Amber amphipods require 1 energy per step, Bronze amphipods require 10 energy, Copper amphipods require 100, and Desert ones require 1000. The amphipods would like you to find a way to organize the amphipods that requires the least total energy.
 
 However, because they are timid and stubborn, the amphipods have some extra rules:
@@ -31,58 +37,82 @@ In the above example, the amphipods can be organized using a minimum of 12521 en
 
 Starting configuration:
 
+```
 #############
 #...........#
 ###B#C#B#D###
   #A#D#C#A#
   #########
+```
+
 One Bronze amphipod moves into the hallway, taking 4 steps and using 40 energy:
 
+```
 #############
 #...B.......#
 ###B#C#.#D###
   #A#D#C#A#
   #########
+```
+
 The only Copper amphipod not in its side room moves there, taking 4 steps and using 400 energy:
 
+```
 #############
 #...B.......#
 ###B#.#C#D###
   #A#D#C#A#
   #########
+```
+
 A Desert amphipod moves out of the way, taking 3 steps and using 3000 energy, and then the Bronze amphipod takes its place, taking 3 steps and using 30 energy:
 
+```
 #############
 #.....D.....#
 ###B#.#C#D###
   #A#B#C#A#
   #########
+```
+
 The leftmost Bronze amphipod moves to its room using 40 energy:
 
+```
 #############
 #.....D.....#
 ###.#B#C#D###
   #A#B#C#A#
   #########
+```
+
 Both amphipods in the rightmost room move into the hallway, using 2003 energy in total:
 
+```
 #############
 #.....D.D.A.#
 ###.#B#C#.###
   #A#B#C#.#
   #########
+```
+
 Both Desert amphipods move into the rightmost room using 7000 energy:
 
+```
 #############
 #.........A.#
 ###.#B#C#D###
   #A#B#C#D#
   #########
+```
+
 Finally, the last Amber amphipod moves into its room, using 8 energy:
 
+```
 #############
 #...........#
 ###A#B#C#D###
   #A#B#C#D#
   #########
-What is the least energy required to organize the amphipods?
+```
+
+**What is the least energy required to organize the amphipods?**
