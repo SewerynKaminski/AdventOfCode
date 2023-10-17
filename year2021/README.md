@@ -11,3 +11,4 @@
 # --- Day 11: [Dumbo Octopus](day11/README.md) ---
 # --- Day 12: [Passage Pathing](day12/README.md) ---
 # --- Day 13: [Transparent Origami](day13/README.md) ---
+# --- Day 14: [Extended Polymerization](day14/README.md) ---
