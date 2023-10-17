@@ -14,3 +14,4 @@
 # --- Day 14: [Extended Polymerization](day14/README.md) ---
 # --- Day 15: [Chiton](day15/README.md) ---
 # --- Day 16: [Packet Decoder](day16/README.md) ---
+# --- Day 17: [Trick Shot](day17/README.md) ---
