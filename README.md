@@ -61,18 +61,27 @@
 <details>
     <summary>
         <a href="year2016">2016</a>
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+        :star: ✩      ✩       ✩      ✩      ✩      ✩      ✩        ✩     ✩
+        ✩ ✩ ✩ ✩ ✩
     </summary>
 </details>
 
 <details>
     <summary>
         <a href="year2017">2017</a>
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+        :star: :star: :star: :star: :star:
     </summary>
 </details>
 
 <details>
     <summary>
         <a href="year2018">2018</a>
+        :star: :star: ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+        ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+        ✩ ✩ ✩ ✩ ✩
     </summary>
 </details>
 
