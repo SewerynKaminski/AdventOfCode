@@ -311,3 +311,9 @@
   * [Day 24](year2022/day24) - Blizzard Basin :star:
 
   * [Day 25](year2022/day25) - Full of Hot Air :star:
+</details>
+
+Legend
+- :star: - both parts
+- 🟊 - one part
+- ✩ - none
