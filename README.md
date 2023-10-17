@@ -81,7 +81,7 @@
   <a href="year2019">2019</a>
    :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
    :star: :star: :star: :star: :star: :star: :star: :star: 🟊      🟊
-     🟊 🟊 🟊 🟊 🟊
+     🟊 ✩ ✩ ✩ ✩
  </summary>
  
 * [Day 1](year2019/day1) - The Tyranny of the Rocket Equation :star:
@@ -201,7 +201,7 @@
   <a href="year2021">2021</a>
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-  :star: :star: 🟊 🟊 🟊
+  :star: :star: :star: ✩ ✩
  </summary>
  
   * [Day 1](year2021/day1) - Sonar Sweep :star:
@@ -259,7 +259,7 @@
 <details><summary><a href="year2022">2022</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star: 🟊 🟊 🟊 🟊
+ :star: :star: 🟊 🟊 🟊
 </summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
