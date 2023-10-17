@@ -70,6 +70,9 @@
 <details>
     <summary>
         <a href="year2017">2017</a>
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+        :star: :star: :star: :star: :star:
     </summary>
 </details>
 
