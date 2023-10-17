@@ -240,7 +240,7 @@
   
   * [Day 18](year2021/day18) - Snailfish :star:
   
-  * [Day 19](year2021/day19) - Beacon Scanner 
+  * [Day 19](year2021/day19) - Beacon Scanner :star:
   
   * [Day 20](year2021/day20) - Trench Map :star:
   
