@@ -4,3 +4,4 @@
 # --- Day 4: [Giant Squid](day4/README.md) ---
 # --- Day 5: [Hydrothermal Venture](day5/README.md) ---
 # --- Day 6: [Lanternfish](day6/README.md) ---
+# --- Day 7: [The Treachery of Whales](day07/README.md) ---
