@@ -85,7 +85,7 @@ The leftmost Bronze amphipod moves to its room using `40` energy:
   #########
 ```
 
-Both amphipods in the rightmost room move into the hallway, using 2003 energy in total:
+Both amphipods in the rightmost room move into the hallway, using `2003` energy in total:
 
 ```
 #############
@@ -95,7 +95,7 @@ Both amphipods in the rightmost room move into the hallway, using 2003 energy in
   #########
 ```
 
-Both Desert amphipods move into the rightmost room using 7000 energy:
+Both Desert amphipods move into the rightmost room using `7000` energy:
 
 ```
 #############
@@ -105,7 +105,7 @@ Both Desert amphipods move into the rightmost room using 7000 energy:
   #########
 ```
 
-Finally, the last Amber amphipod moves into its room, using 8 energy:
+Finally, the last Amber amphipod moves into its room, using `8` energy:
 
 ```
 #############
