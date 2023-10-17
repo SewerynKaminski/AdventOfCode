@@ -15,3 +15,4 @@
 # --- Day 15: [Chiton](day15/README.md) ---
 # --- Day 16: [Packet Decoder](day16/README.md) ---
 # --- Day 17: [Trick Shot](day17/README.md) ---
+# --- Day 18: [Snailfish](day18/README.md) ---
