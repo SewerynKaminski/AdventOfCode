@@ -9,3 +9,4 @@
 # --- Day 9: [Smoke Basin](day09/README.md) ---
 # --- Day 10: [Syntax Scoring](day10/README.md) ---
 # --- Day 11: [Dumbo Octopus](day11/README.md) ---
+# --- Day 12: [Passage Pathing](day12/README.md) ---
