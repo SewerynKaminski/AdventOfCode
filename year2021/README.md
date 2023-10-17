@@ -21,3 +21,4 @@
 # --- Day 21: [Dirac Dice](day21/README.md) ---
 # --- Day 22: [Reactor Reboot](day22/README.md) ---
 # --- Day 23: [Amphipod](day23/README.md) ---
+# --- Day 24: [Arithmetic Logic Unit](day24/README.md) ---
