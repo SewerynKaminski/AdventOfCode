@@ -61,6 +61,9 @@
 <details>
     <summary>
         <a href="year2016">2016</a>
+        :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+        :star: ✩      ✩       ✩      ✩      ✩      ✩      ✩        ✩     ✩
+        ✩ ✩ ✩ ✩ ✩
     </summary>
 </details>
 
