@@ -80,8 +80,8 @@
  <summary>
   <a href="year2019">2019</a>
    :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star: :star: :star: :star:
-   :eight_pointed_black_star: :eight_pointed_black_star: :eight_pointed_black_star:
+   :star: :star: :star: :star: :star: :star: :star: :star: 🟊      🟊
+     🟊 ✩ ✩ ✩ ✩
  </summary>
  
 * [Day 1](year2019/day1) - The Tyranny of the Rocket Equation :star:
@@ -114,7 +114,7 @@
 
 * [Day 15](year2019/day15) - Oxygen System :star:
 
-* [Day 16](year2019/day16) - Flawed Frequency Transmission :eight_pointed_black_star:
+* [Day 16](year2019/day16) - Flawed Frequency Transmission 🟊
 
 * [Day 17](year2019/day17) - Set and Forget :star:
 
@@ -124,9 +124,9 @@
 
 * [Day 20](year2019/day20) - Donut Maze :star:
 
-* [Day 21](year2019/day21) - Springdroid Adventure :eight_pointed_black_star:
+* [Day 21](year2019/day21) - Springdroid Adventure 🟊
 
-* [Day 22](year2019/day22) - Slam Shuffle :eight_pointed_black_star:
+* [Day 22](year2019/day22) - Slam Shuffle 🟊
 
 * [Day 23](year2019/day23) - Category Six
 
@@ -201,7 +201,7 @@
   <a href="year2021">2021</a>
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-  :star: :star:
+  :star: :star: :star: ✩ ✩
  </summary>
  
   * [Day 1](year2021/day1) - Sonar Sweep :star:
@@ -240,7 +240,7 @@
   
   * [Day 18](year2021/day18) - Snailfish :star:
   
-  * [Day 19](year2021/day19) - Beacon Scanner 
+  * [Day 19](year2021/day19) - Beacon Scanner :star:
   
   * [Day 20](year2021/day20) - Trench Map :star:
   
@@ -259,8 +259,8 @@
 <details><summary><a href="year2022">2022</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star:
- :eight_pointed_black_star: :eight_pointed_black_star: :eight_pointed_black_star:</summary>
+ :star: :star: 🟊 🟊 🟊
+</summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
   
@@ -292,9 +292,9 @@
   
   * [Day 15](year2022/day15) - Beacon Exclusion Zone :star:
 
-  * [Day 16](year2022/day16) - Proboscidea Volcanium :eight_pointed_black_star:
+  * [Day 16](year2022/day16) - Proboscidea Volcanium 🟊
 
-  * [Day 17](year2022/day17) - Pyroclastic Flow :eight_pointed_black_star:
+  * [Day 17](year2022/day17) - Pyroclastic Flow 🟊
 
   * [Day 18](year2022/day18) - Boiling Boulders :star:
   
@@ -304,10 +304,16 @@
   
   * [Day 21](year2022/day21) - Monkey Math :star:
   
-  * [Day 22](year2022/day22) - Monkey Map :eight_pointed_black_star:
+  * [Day 22](year2022/day22) - Monkey Map 🟊
 
   * [Day 23](year2022/day23) - Unstable Diffusion :star:
 
   * [Day 24](year2022/day24) - Blizzard Basin :star:
 
   * [Day 25](year2022/day25) - Full of Hot Air :star:
+</details>
+
+Legend
+- :star: - both parts
+- 🟊 - one part
+- ✩ - none
