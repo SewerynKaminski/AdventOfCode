@@ -13,3 +13,4 @@
 # --- Day 13: [Transparent Origami](day13/README.md) ---
 # --- Day 14: [Extended Polymerization](day14/README.md) ---
 # --- Day 15: [Chiton](day15/README.md) ---
+# --- Day 16: [Packet Decoder](day16/README.md) ---
