@@ -300,7 +300,7 @@ Find somewhere safe to land your submarine. **What is the first step on which no
 
 Your puzzle answer was 598.
 
-The first half of this puzzle is complete! It provides one gold star: *
+The first half of this puzzle is complete! It provides one gold star: :star:
 
 # --- Part Two ---
 
