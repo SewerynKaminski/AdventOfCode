@@ -89,8 +89,8 @@
  <summary>
   <a href="year2019">2019</a>
    :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star: :star: :star: :star: 🟊      🟊
-     🟊 ✩ ✩ ✩ ✩
+   :star: :star: :star: :star: :star: :star: :star: :star: 🟊 🟊 🟊 
+    🟊  ✩ ✩ ✩ ✩
  </summary>
  
 * [Day 1](year2019/day1) - The Tyranny of the Rocket Equation :star:
@@ -210,7 +210,7 @@
   <a href="year2021">2021</a>
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-  :star: :star: :star: ✩ ✩
+  :star: :star: :star: :star: ✩
  </summary>
  
   * [Day 1](year2021/day1) - Sonar Sweep :star:
@@ -261,7 +261,7 @@
   
   * [Day 24](year2021/day24) - Arithmetic Logic Unit :star:
   
-  * [Day 25](year2021/day25) - Sea Cucumber 
+  * [Day 25](year2021/day25) - Sea Cucumber :star:
 
  </details>
 
