@@ -210,7 +210,7 @@
   <a href="year2021">2021</a>
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-  :star: :star: :star: :star: ✩
+  :star: :star: :star: :star: :star:
  </summary>
  
   * [Day 1](year2021/day1) - Sonar Sweep :star:
@@ -257,7 +257,7 @@
   
   * [Day 22](year2021/day22) - Reactor Reboot :star:
   
-  * [Day 23](year2021/day23) - Amphipod 
+  * [Day 23](year2021/day23) - Amphipod :star:
   
   * [Day 24](year2021/day24) - Arithmetic Logic Unit :star:
   
