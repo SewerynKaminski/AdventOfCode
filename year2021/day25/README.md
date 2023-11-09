@@ -298,7 +298,7 @@ In this example, the sea cucumbers stop moving after `58` steps.
 
 Find somewhere safe to land your submarine. **What is the first step on which no sea cucumbers move?**
 
-Your puzzle answer was 598.
+Your puzzle answer was `598`.
 
 The first half of this puzzle is complete! It provides one gold star: :star:
 
