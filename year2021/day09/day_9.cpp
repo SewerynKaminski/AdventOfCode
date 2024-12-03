@@ -1,17 +1,18 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <algorithm>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
+//#include <limits>
+//#include <algorithm>
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_9 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
 struct Display {
@@ -20,8 +21,9 @@ struct Display {
 };
 
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+//auto load ( std::string file ) {
+//    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
     std::vector<Display> data;
 
     char c;
@@ -54,10 +56,10 @@ auto load ( std::string file ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1() {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0;
 
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     for ( auto& display : data )
         for ( auto& o : display.output )
@@ -87,10 +89,10 @@ bool contains ( const std::string& a, const std::string& b ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2() {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0;
 
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     for ( auto& display : data ) {
         std::string digits[10];

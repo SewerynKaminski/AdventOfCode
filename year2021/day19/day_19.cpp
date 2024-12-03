@@ -1,30 +1,24 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
 //#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
 //#include <limits>
-#include <unordered_set>
+//#include <unordered_set>
 //#include <unordered_set>
 //#include <iomanip>
 //#include <bit>
 #include <optional>
 
 //---------------------------------------------------------------------------//
-#include "day_19.h"
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_19 {
-
-//---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
 struct Point3 {
@@ -108,8 +102,8 @@ Point3 maxxyz ( const Point3& a, const Point3& b ) {
 constexpr int INT_MAX = ( int ) ( ( unsigned int ) ( -1 ) >> 1 );
 constexpr int INT_MIN = ( int ) ( ( unsigned int ) 1 << 31 );
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     //std::vector<std::vector<Point3>> data;
     std::vector<Scanner> data;
     Point3 min, max, ctr;
@@ -563,20 +557,21 @@ void find ( std::vector<Scanner>& data, size_t i, size_t j ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto data = load (
+        puzzle_input
         //"../testinput"
-        "../input"
+        //"../input"
         );
 
-    data[0].r=0;
-    find(data,0,1);
+    data[0].r = 0;
+    find ( data, 0, 1 );
 
     std::unordered_set<uint64_t> ans;
     for ( auto& s : data ) {
         for ( auto& b : s.beacons ) {
             auto bp = s.pos - rotate ( s.r, b );
-            ans.insert( bp.tou() );
+            ans.insert ( bp.tou() );
         }
     }
 
@@ -584,19 +579,22 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
-    auto data = load ( "../input" );
+void Task_2 ( std::istream& puzzle_input ) {
+    auto data = load (
+        puzzle_input
+        //"../input"
+        );
 
-    data[0].r=0;
-    find(data,0,1);
+    data[0].r = 0;
+    find ( data, 0, 1 );
 
-    int64_t ans=0;
-    for ( size_t i=0; i < data.size(); i++ ) {
-        for ( size_t j=i+1; j < data.size(); j++ ) {
-            int64_t d = abs(data[i].pos.x - data[j].pos.x)
-                +abs(data[i].pos.y - data[j].pos.y)
-                     +abs(data[i].pos.z - data[j].pos.z);
-            ans = std::max(d, ans);
+    int64_t ans = 0;
+    for ( size_t i = 0; i < data.size(); i++ ) {
+        for ( size_t j = i + 1; j < data.size(); j++ ) {
+            int64_t d = std::abs ( data[i].pos.x - data[j].pos.x )
+                      + std::abs ( data[i].pos.y - data[j].pos.y )
+                      + std::abs ( data[i].pos.z - data[j].pos.z );
+            ans = std::max ( d, ans );
         }
     }
 

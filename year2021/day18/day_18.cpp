@@ -1,32 +1,26 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <bit>
+// #include <string>
+// #include <iostream>
+// #include <sstream>
+// #include <map>
+// #include <unordered_map>
+// #include <vector>
+// #include <ranges>
+// #include <fstream>
+// #include <limits>
+// #include <set>
+// #include <iomanip>
+// #include <bit>
 
 //---------------------------------------------------------------------------//
-#include "day_18.h"
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_18 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::vector<std::string> data;
 
     std::string line;
@@ -65,18 +59,18 @@ bool explode ( std::string& s ) {
         // wartosc po prawej od pary
         auto ri = s.find_first_not_of ( "],[", i );
         auto rj = ri;
-        if ( ri != -1 ) {
+        if ( ri != std::string::npos ) {
             rj = s.find_first_not_of ( "0123456789", ri );
             right = stoi ( s.substr ( ri, rj - ri ) );
             //std::cout << ri << " - " << rj << ' ' << right << '\n';
         }
         // wartosc po lewej od pary
         i = bi;
-        while ( ( s[i] == ']' || s[i] == ',' || s[i] == '[' ) && i < -1 ) {
+        while ( ( s[i] == ']' || s[i] == ',' || s[i] == '[' ) && i < std::string::npos ) {
             i--;
         }
         auto lj = i;
-        if ( i != -1 ) {
+        if ( i != std::string::npos ) {
             lj = i + 1;
             while ( s[i] >= '0' && s[i] <= '9' ) {
                 i--;
@@ -84,7 +78,7 @@ bool explode ( std::string& s ) {
             i++;
         }
         auto li = i;
-        if ( li != -1 ) {
+        if ( li != std::string::npos ) {
             //std::cout << li << ' ' << lj << " " << stoi ( s.substr ( li, lj - li ) ) << '\n';
             left = stoi ( s.substr ( li, lj - li ) );
         }
@@ -94,13 +88,13 @@ bool explode ( std::string& s ) {
         auto bleft = stoi ( s.substr ( bi + 1,  comma - ( bi + 1 ) ) );
         auto bright = stoi ( s.substr ( comma + 1,  comma - ( bj ) ) );
 
-        if ( ri != -1 ) {
+        if ( ri != std::string::npos ) {
             s.replace ( ri, rj - ri, std::to_string ( right + bright ) );
         }
 
         s.replace ( bi, bj - bi + 1, "0" );
 
-        if ( li != -1 ) {
+        if ( li != std::string::npos ) {
             s.replace ( li, lj - li, std::to_string ( left + bleft ) );
         }
         //std::cout << s;
@@ -112,9 +106,9 @@ bool explode ( std::string& s ) {
 //---------------------------------------------------------------------------//
 bool split ( std::string& s ) {
     auto i = 0ul;
-    while ( i != -1 ) {
+    while ( i != std::string::npos ) {
         i = s.find_first_not_of ( "[,]", i );
-        if ( i != -1 ) {
+        if ( i != std::string::npos ) {
             auto j = s.find_first_of ( "[,]", i );
             if ( j - i > 1 ) {
                 int v = stoi ( s.substr ( i, j - i ) );
@@ -160,12 +154,14 @@ uint64_t magnitude ( std::string& s, size_t& i ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input
+                     //"../input"
+                     );
 
     std::string a = data[0];
-    for ( auto i = 1; i < data.size(); i++ ) {
+    for ( auto i = 1ull; i < data.size(); i++ ) {
         //std::cout << num << '\n';
         a = sum ( a, data[i] );
     }
@@ -185,11 +181,13 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ul;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input
+                    //"../input"
+                     );
 
-    for ( int j = 0; j < data.size() - 1; j++ ) {
+    for ( auto j = 0ull; j < data.size() - 1; j++ ) {
         std::string a = data[0];
         for ( auto i = j + 1; i < data.size(); i++ ) {
             size_t k = 0;

@@ -1,28 +1,28 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <bit>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
+//#include <limits>
+//#include <set>
+//#include <iomanip>
+//#include <bit>
 
 //---------------------------------------------------------------------------//
-#include "day_16.h"
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_16 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+// template<class T>
+// constexpr auto Range ( T a, T b ) {
+//     return std::views::iota ( a, b );
+// }
 
 //---------------------------------------------------------------------------//
 std::string convert ( std::string line ) {
@@ -34,8 +34,8 @@ std::string convert ( std::string line ) {
 }
 
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::string data;
 
     std::string line;
@@ -175,11 +175,13 @@ uint64_t calculate_packet ( std::string data ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input
+            //"../input"
+        );
 
-    // Examples
+    // Example
     /*data = convert(
                     //"D2FE28"
                     //"EE00D40C823060"
@@ -193,11 +195,13 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
-    auto ans = 0ull;
-    auto data = load ( "../input" );
-
-    /*data = convert(
+void Task_2 ( std::istream& puzzle_input ) {
+   auto ans = 0ull;
+   auto data = load ( puzzle_input
+            //"../input"
+       );
+   // Example
+   /*data = convert(
                 //"C200B40A82"
                 //"04005AC33890"
                 //"880086C3E88112"
@@ -208,9 +212,9 @@ void Task_2 ( ) {
                 "9C0141080250320F1802104A08"
                  );*/
 
-    ans = calculate_packet ( data );
+   ans = calculate_packet ( data );
 
-    std::cout << __FUNCTION__ << ": " << ans << '\n';
+   std::cout << __FUNCTION__ << ": " << ans << '\n';
 }
 
 //---------------------------------------------------------------------------//

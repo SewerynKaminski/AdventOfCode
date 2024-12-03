@@ -1,34 +1,35 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
+//#include <limits>
 #include <set>
+#include "day"
 
 //---------------------------------------------------------------------------//
-#include "day_13.h"
+//#include "day_13.h"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_13 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+// template<class T>
+// constexpr auto Range ( T a, T b ) {
+//     return std::views::iota ( a, b );
+// }
 //---------------------------------------------------------------------------//
 struct Point {
     int x, y;
 };
 
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::vector<Point> data;
     std::vector<std::tuple<char, int>> fold;
 
@@ -63,9 +64,9 @@ auto load ( std::string file ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0;
-    auto [data, fold] = load ( "../input" );
+    auto [data, fold] = load ( puzzle_input );
 
     auto [a, v] = fold[0];
     for ( auto& p : data ) {
@@ -90,8 +91,8 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
-    auto [data, fold] = load ( "../input" );
+void Task_2 ( std::istream& puzzle_input ) {
+    auto [data, fold] = load ( puzzle_input );
 
     for ( auto [a, v] : fold )
         for ( auto& p : data ) {

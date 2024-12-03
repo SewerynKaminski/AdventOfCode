@@ -1,12 +1,12 @@
 //---------------------------------------------------------------------------//
 #include <string>
 #include <iostream>
-#include <sstream>
+//#include <sstream>
 //#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
 //#include <limits>
 //#include <set>
 //#include <iomanip>
@@ -17,39 +17,28 @@
 //#include <queue>
 #include "fmt/core.h"
 //#include "fmt/ranges.h"
+#include "day"
+//---------------------------------------------------------------------------//
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_24 {
-
-//---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T b ) {
-    return Range ( T ( 0 ), b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::ifstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::ifstream fs ( file );
     std::string line;
     std::vector<std::string> data;
-    auto&& is = file.starts_with ( "../test" )
-            ? ( std::istream&& ) std::stringstream {
-                //R"(inp x
-                //     mul x -1)"
-                R"(
-                inp z
-                inp x
-                mul z 3
-                eql z x
-                )"
-            }
-            :( std::istream&& ) std::ifstream ( file );
+    auto&& is = fs;
+    // auto&& is = file.starts_with ( "../test" )
+    //         ? ( std::istream&& ) std::stringstream {
+    //             //R"(inp x
+    //             //     mul x -1)"
+    //             R"(
+    //             inp z
+    //             inp x
+    //             mul z 3
+    //             eql z x
+    //             )"
+    //         }
+    //         :( std::istream&& ) std::ifstream ( file );
 
     while ( is.good() ) {
         std::getline ( is, line );
@@ -62,7 +51,7 @@ auto load ( std::string file ) {
     return data;
 }
 
-struct S{
+struct S {
     int i1;
     int i2;
     int v;
@@ -174,8 +163,10 @@ auto check ( std::vector<std::string>& data, int64_t val ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
-    auto data = load ( "../input" );
+void Task_1 ( std::istream& puzzle_input ) {
+    auto data = load ( puzzle_input
+                      //"../input"
+                     );
     auto pairs = analize( data );
 // aȧ bḃ cċ dḋ eė fḟ gġ
     // MONAD:
@@ -228,8 +219,10 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
-    auto data = load ( "../input" );
+void Task_2 ( std::istream& puzzle_input ) {
+    auto data = load ( puzzle_input
+                       //"../input"
+                     );
     auto pairs = analize ( data );
 
     // 73181221197111

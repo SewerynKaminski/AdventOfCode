@@ -1,53 +1,43 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <bit>
-#include <math.h>
-#include <numeric>
-#include <algorithm>
-#include <queue>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
+//#include <limits>
+//#include <set>
+//#include <iomanip>
+//#include <bit>
+//#include <math.h>
+//#include <numeric>
+//#include <algorithm>
+//#include <queue>
+
+#include "day"
+//---------------------------------------------------------------------------//
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_23 {
-
-//---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T b ) {
-    return Range ( T ( 0 ), b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::ifstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::ifstream fs ( file );
     std::string line;
     uint64_t data = 0;
-    auto&& is = file.starts_with ( "../test" )
-    ? ( std::istream&& ) std::istringstream{
-        "#############\n"
-        "#...........#\n"
-        "###B#C#B#D###\n"
-        "  #A#D#C#A#\n"
-        "  #########\n"}
-:
-    ( std::istream&& ) std::ifstream ( file );
+//     auto&& is = file.starts_with ( "../test" )
+//     ? ( std::istream&& ) std::istringstream{
+//         "#############\n"
+//         "#...........#\n"
+//         "###B#C#B#D###\n"
+//         "  #A#D#C#A#\n"
+//         "  #########\n"}
+// :
+//     ( std::istream&& ) std::ifstream ( file );
 
-    for ( is >> line >> line; auto i : Range ( 2 ) ) {
-        for ( is >> line; auto c : line )
+    for ( fs >> line >> line; auto i : Range ( 2 ) ) {
+        (void)i;
+        for ( fs >> line; auto c : line )
             ( c != '#' ) && ( data = ( data << 3 ) | uint64_t ( c - 'A' + 1 ) );
     }
 
@@ -169,7 +159,7 @@ void movedown ( uint64_t& board ) {
         board &= ~ ( 7ull << ( 24 + 3 * 5 ) );
     }
     v = hdr<4> ( board );
-    if ( v && lin ( v, 4, 4 ) ) && !get<0> ( v - 1, board ) && !get<1> ( v - 1, board ) ) {
+    if ( v && lin ( v, 4, 4 ) && !get<0> ( v - 1, board ) && !get<1> ( v - 1, board ) ) {
         set<1> ( board, v - 1 );
         board &= ~ ( 7ull << ( 24 + 3 * 4 ) );
     } else if ( v && lin ( v, 4, 4 ) && !get<1> ( v - 1, board ) && get<1> ( v - 1, board ) == v ) {
@@ -214,8 +204,9 @@ void movedown ( uint64_t& board ) {
 void go ( uint64_t board ) {
     movedown ( board );
     show ( board );
-    std::string line;
-    std::cin >> line;
+    //std::string line;
+    //std::cin >> line;
+    getchar();
 
 
     call<0> ( board );
@@ -226,10 +217,12 @@ void go ( uint64_t board ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
 
-    auto data = load ( "../testinput" );
+    auto data = load ( puzzle_input
+                       //"../testinput"
+                     );
 
     go ( data );
 
@@ -239,9 +232,11 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ll;
-    auto data = load ( "../testinput" );
+    auto data = load ( puzzle_input
+                       //"../testinput"
+                     );
 
     std::cout << __FUNCTION__ << ": " << ans << "\n";
 }

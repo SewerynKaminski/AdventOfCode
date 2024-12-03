@@ -1,13 +1,14 @@
 #include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+#include <cstdint>
 #include "day"
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_6 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
 //auto testinput = R"(3,4,3,1,2)";

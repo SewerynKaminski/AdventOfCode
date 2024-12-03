@@ -1,27 +1,29 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <algorithm>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
+//#include <limits>
+//#include <algorithm>
+#include <optional>
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_10 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+// template<class T>
+// constexpr auto Range ( T a, T b ) {
+//     return std::views::iota ( a, b );
+// }
 
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::vector<std::string> data;
     std::string line;
 
@@ -42,8 +44,8 @@ bool isclose ( char c ) {
 }
 
 //---------------------------------------------------------------------------//
-int check ( std::string& s, int& i ) {
-    if ( i >= s.size() ) return -1;
+std::optional<uint> check ( std::string& s, uint& i ) {
+    if ( i >= s.size() ) { return std::nullopt; }
     while ( i < s.size() ) {
         switch ( s[i] ) {
         case '(': {
@@ -98,15 +100,16 @@ int check ( std::string& s, int& i ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1() {
-    auto ans = 0;
+void Task_1( std::istream& puzzle_input ) {
+    auto ans = 0ul;
 
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     for ( auto& l : data ) {
-        int result = 0;
-        int i = 0;
-        result = check ( l, i );
+        uint result = 0;
+        uint i = 0;
+
+        result = check ( l, i ).value_or(0);
 
         ans += 3 * ( ')' == result ) +
                57 * ( ']' == result ) +
@@ -118,15 +121,15 @@ void Task_1() {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2() {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ul;
     std::vector<uint64_t> scores;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
     for ( auto l : data ) {
-        int i = 0;
-        if ( -1 == check ( l, i ) ) {
+        uint i = 0;
+        if ( !check ( l, i ) ) {
             for ( int j = 0; j < 2 * ( int ) l.size(); j++ )
-                for ( i = 0; i < ( int ) l.size(); i++ ) {
+                for ( i = 0; i < l.size(); i++ ) {
                     if ( ( l[i] == '(' && l[i + 1] == ')' ) ||
                             ( l[i] == '{' && l[i + 1] == '}' ) ||
                             ( l[i] == '[' && l[i + 1] == ']' ) ||

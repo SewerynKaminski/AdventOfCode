@@ -87,7 +87,6 @@ auto listFiles ( std::istream& file ) {
     for ( auto& s : list ) {
         std::string path = s.name;
         if ( s.isDir ) {
-            //path = s.name.substr ( 0, s.name.length() - 1 );
             path = path.substr ( 0, path.length() - 1 );
         }
         path = getPath ( path );

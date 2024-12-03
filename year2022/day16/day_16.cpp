@@ -41,61 +41,8 @@ struct Room {
     int name;
     int rate;
     std::vector<int> rooms;
-    int distance;
+    int opening_time=0;
 };
-
-void permute( std::string s, uint n, std::function<void(std::string)> f ) {
-    for ( auto i=n; i<s.size(); i++ ) {
-        std::swap ( s[i], s[n] );
-        if ( n+1 < s.size() ) {
-            permute( s, n+1, f );
-        } else {
-            f( s );
-        }
-    }
-}
-
-void clear_distance( std::unordered_map<int, Room>& rooms ) {
-    for ( auto& r: rooms ) {
-        r.second.distance = -1;
-    }
-}
-//---------------------------------------------------------------------------//
-int find ( std::unordered_map<int, Room>& rooms, int start, int end, int n=0 ) {
-    if ( rooms[start].distance==-1 ) rooms[start].distance = n;
-    if ( start==end ) {
-        rooms[end].distance = n;
-        return n;
-    }
-    for ( auto r : rooms[start].rooms ) {
-        if ( rooms[r].distance==-1 || rooms[r].distance > n) {
-            rooms[r].distance = n;
-            find ( rooms, r, end, n+1 );
-        }
-    }
-    return rooms[end].distance;
-};
-
-//---------------------------------------------------------------------------//
-std::vector<int> generate_distance_table( std::unordered_map<int, Room>& rooms ) {
-    std::cout << "generate\n";
-    std::vector<int> tab;
-    for ( auto& r1 : rooms ) {
-        //std::cout << ".\n";
-        if ( r1.second.rate==0 && r1.first!=*(uint16_t*)"AA" ) continue;
-        for ( auto& r2 : rooms ) {
-            if ( r2.second.rate==0 && r2.first!=*(uint16_t*)"AA" ) continue;
-            //std::cout << (char*)&r1.first << "-" << (char*)&r2.first << " ";
-            clear_distance( rooms );
-            auto l = find( rooms, r1.first, r2.first );
-            tab.push_back ( l );
-            //std::cout << r2.second.distance << " ";
-        }
-        //std::cout << "\n";
-    }
-    //std::cout << "\n";
-    return tab;
-}
 
 int traverse ( std::unordered_map<int, Room>& rooms, int from, int b, int t, int v = 0 ) {
     int max = v;
@@ -115,34 +62,62 @@ int traverse ( std::unordered_map<int, Room>& rooms, int from, int b, int t, int
     return max;
 }
 
-int traverse2 ( std::unordered_map<int, Room>& rooms, int f1, int f2, int b1, int b2, int t1, int t2, int v = 0 ) {
-    int max = v;
-    if ( t1 > 0 || t2 > 0 ) {
+int traverse2 ( std::unordered_map<int, Room>& rooms, int f1, int f2, int b1, int b2, int t, bool open1, bool open2 ) {
+    static int max = 0;
+    if ( t<=0 ) {
+        int sum=0;
+        for ( auto& [key, r] : rooms ) {
+            //if ( r.opening_time>0 )
+            sum += (r.opening_time-1)*r.rate;
+        }
+        max = std::max( max, sum );
+        //std::cout << max << " ";
+    }
+    if ( t > 0 ) {
+        auto o1 = rooms[b1].opening_time;
+        auto o2 = rooms[b2].opening_time;
+        //open1 = o1==0 && rooms[b1].rate;
+        //open2 = o2==0 && rooms[b2].rate;
+        if ( open1 && !open2 ) {
+            rooms[b1].opening_time = std::max( t, o1 );
+            for ( auto r2 : rooms[b2].rooms ) {
+                traverse2( rooms, b1, b2, b1, r2, t-1, false, false );
+            }
+            rooms[b1].opening_time = o1;
+        } else if( !open1 && open2 ){
+            rooms[b2].opening_time = std::max( t, o2 );
+            for ( auto r1 : rooms[b1].rooms ) {
+                traverse2( rooms, b1, b2, r1, b2, t-1, false, false );
+            }
+            rooms[b2].opening_time = o2;
+        }/* else if ( open1 && open2 ) {
+            rooms[b1].opening_time = std::max( t, o1 );
+            rooms[b2].opening_time = std::max( t, o2 );
+            traverse2( rooms, b1, b2, b1, b2, t-1, false, false );
+            rooms[b1].opening_time = o1;
+            rooms[b2].opening_time = o2;
+        }*/else
         for ( auto r1 : rooms[b1].rooms ) {
             for ( auto r2 : rooms[b2].rooms ) {
-                if ( r1>r2 && f1!=b1 && f2!=b2 ) {
-                    auto rate1 = rooms[r1].rate;
-                    auto rate2 = rooms[r2].rate;
-                    if ( t1<0 ) rate1=0;
-                    if ( t2<0 ) rate2=0;
-                            max = std::max( traverse2( rooms, b1, b2, r1, r2, t1-1, t2-1, v ), max );
-                        if ( rate1 && rate2==0 ) {
-                            rooms[r1].rate = 0;
-                            max = std::max( traverse2( rooms, b1, b2, r1, r2, t1-2, t2-1, v+(t1-2)*rate1 ), max );
-                            rooms[r1].rate = rate1;
-                        }else
-                        if ( rate1==0 && rate2 ) {
-                            rooms[r2].rate = 0;
-                            max = std::max( traverse2( rooms, b1, b2, r1, r2, t1-1, t2-2, v+(t2-2)*rate2 ), max );
-                            rooms[r2].rate = rate2;
-                        }else
-                        if ( rate1 && rate2 ) {
-                            rooms[r1].rate = 0;
-                            rooms[r2].rate = 0;
-                            max = std::max( traverse2( rooms, b1, b2, r1, r2, t1-2, t2-2, v+(t1-2)*rate1+(t2-2)*rate2 ), max );
-                            rooms[r1].rate = rate1;
-                            rooms[r2].rate = rate2;
-                        }
+                if ( (f1!=r1 || rooms[b1].rooms.size()==1) && (f2!=r2|| rooms[b2].rooms.size()==1) ) {
+                    auto o1 = rooms[r1].opening_time;
+                    auto o2 = rooms[r2].opening_time;
+
+                    //traverse2( rooms, b1, b2, r1, r2, t-1, false, false );
+                    if ( (o1 || rooms[r1].rate==0) && (o2 || rooms[r1].rate==0) ) {
+                        traverse2( rooms, b1, b2, r1, r2, t-2, false, false );
+                    }
+                    if ( !o1 && rooms[r1].rate && !o2 && rooms[r1].rate ) {
+                        traverse2( rooms, b1, b2, r1, r2, t-1, true, true );
+                    }
+                    if( !o1 && rooms[r1].rate ) {
+                        traverse2( rooms, b1, b2, r1, r2, t-1, false, false );
+                        traverse2( rooms, b1, b2, r1, r2, t-1, true, false );
+                    }
+                    if( !o2 && rooms[r2].rate ) {
+                        traverse2( rooms, b1, b2, r1, r2, t-1, false, false);
+                        traverse2( rooms, b1, b2, r1, r2, t-1, false, true);
+                    }
                 }
             }
         }
@@ -227,7 +202,7 @@ void Task_2 ( std::istream & puzzle_input ) {
         rooms[r.name] = r;
     }
 
-    ans = traverse2( rooms, 0, 0, AA, AA, 26, 26 );
+    ans = traverse2( rooms, 0, 0, AA, AA, 26, false, false );
 
     OUT ( ans );
 }

@@ -1,32 +1,26 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
+// #include <string>
+// #include <iostream>
+// #include <sstream>
+// #include <map>
+// #include <unordered_map>
+// #include <vector>
 #include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <bit>
+// #include <fstream>
+// #include <limits>
+// #include <set>
+// #include <iomanip>
+// #include <bit>
 
 //---------------------------------------------------------------------------//
-#include "day_17.h"
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_17 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
 
     std::string line;
     char c;
@@ -45,9 +39,11 @@ auto load ( std::string file ) {
 
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto [xmin, xmax, ymin, ymax] = load ( "../input" );
+    auto [xmin, xmax, ymin, ymax] = load ( puzzle_input
+        //"../input"
+        );
 
     ans = -ymin - 1;
     ans = ans * ( ans + 1 ) / 2;
@@ -71,9 +67,11 @@ bool shot ( int vx, int vy, int xmin, int xmax, int ymin, int ymax ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto [xmin, xmax, ymin, ymax] = load ( "../input" );
+    auto [xmin, xmax, ymin, ymax] = load ( puzzle_input
+                                           //"../input"
+                                         );
 
     for ( auto vy : Range ( ymin - 1, - ( ymin - 1 ) ) )
         for ( auto vx : Range ( 1, xmax + 1 ) )

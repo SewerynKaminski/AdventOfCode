@@ -1,24 +1,24 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
 #include <ranges>
-#include <fstream>
-#include <limits>
-#include <numeric>
-#include <algorithm>
+//#include <fstream>
+//#include <limits>
+//#include <numeric>
+//#include <algorithm>
+#include "day"
+//---------------------------------------------------------------------------//
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_7 {
-
-//---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+//template<class T>
+//constexpr auto Range ( T a, T b ) {
+//    return std::views::iota ( a, b );
+//}
 
 //---------------------------------------------------------------------------//
 auto load ( std::string file ) {
@@ -36,10 +36,26 @@ auto load ( std::string file ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1() {
+std::vector<int> load( std::istream& ss) {
+    std::vector<int> data;
+    std::string dir;
+    int value;
+    char comma;
+    while ( ss.good() ) {
+        if ( ss >> value ) {
+            ss >> comma;
+            data.push_back ( value );
+        }
+    }
+    return data;
+}
+
+//---------------------------------------------------------------------------//
+void Task_1(std::istream& puzzle_input ) {
     auto ans = std::numeric_limits<int64_t>::max();;
 
-    auto data = load ( "../input" );
+    //auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     auto [min, max] = std::minmax_element ( data.begin(), data.end() );
 
@@ -55,10 +71,11 @@ void Task_1() {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2() {
+void Task_2( std::istream& puzzle_input ) {
     auto ans = std::numeric_limits<int64_t>::max();;
 
-    auto data = load ( "../input" );
+    //auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     auto [min, max] = std::minmax_element ( data.begin(), data.end() );
 

@@ -1,17 +1,17 @@
-cmake_minimum_required(VERSION 3.24)
+cmake_minimum_required(VERSION 3.29)
 
 project(AoC LANGUAGES CXX)
 
 #include(ExternalProject)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(.)
 
 function (addday YEAR DAY)
     #add_subdirectory(./year${YEAR}/day${DAY}/ ./year${YEAR}/day${DAY}/build )
-    add_subdirectory(./year${YEAR}/day${DAY}/ ./year${YEAR}/day${DAY}/build)
+    add_subdirectory(./year${YEAR}/day${DAY}/ )
 endfunction()
 
 set(YEAR 2021)
@@ -27,7 +27,7 @@ addday(${YEAR} 2)
 addday(${YEAR} 3)
 addday(${YEAR} 4)
 addday(${YEAR} 5)
-#addday(${YEAR} 06)
+addday(${YEAR} 06)
 addday(${YEAR} 07)
 addday(${YEAR} 08)
 addday(${YEAR} 09)
@@ -40,11 +40,14 @@ addday(${YEAR} 15)
 addday(${YEAR} 16)
 addday(${YEAR} 17)
 addday(${YEAR} 18)
-#addday(${YEAR} 19)
+addday(${YEAR} 19)
 addday(${YEAR} 20)
 addday(${YEAR} 21)
 addday(${YEAR} 22)
-                     
+addday(${YEAR} 23)
+addday(${YEAR} 24)
+addday(${YEAR} 25)
+
 set(YEAR 2022)
 addday(${YEAR} 1)
 addday(${YEAR} 2)
@@ -69,5 +72,10 @@ addday(${YEAR} 15)
 #addday(${YEAR} 21)
 #addday(${YEAR} 22)
 
+# set(YEAR 2023)
 
+set(YEAR 2024)
+addday(${YEAR} 1)
+addday(${YEAR} 2)
+addday(${YEAR} 3)
 

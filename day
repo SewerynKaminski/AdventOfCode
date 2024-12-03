@@ -7,11 +7,14 @@
 #include <unordered_map>
 #include <vector>
 #include <list>
-//#include <ranges>
+#include <ranges>
 #include <fstream>
 #include <limits>
 #include <algorithm>
 #include <numeric>
+#include <list>
+#include <unordered_set>
+#include <cstdint>
 
 #include "aoc.h"
 #include "defines"

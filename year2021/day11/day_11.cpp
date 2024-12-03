@@ -1,26 +1,22 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
+//#include <ranges>
+//#include <fstream>
+//#include <limits>
 #include <ranges>
-#include <fstream>
-#include <limits>
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_11 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::vector<std::string> data;
     std::string line;
 
@@ -74,14 +70,15 @@ auto flash ( std::vector<std::string>& data ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1() {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0;
 
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     //show ( data );
 
     for ( auto step : Range ( 0, 100 ) ) {
+        (void)step;
         //std::cout << "Step: " << (step+1) << '\n';
         inc ( data );
         ans += flash ( data );
@@ -89,23 +86,22 @@ void Task_1() {
         //show ( data );
     }
 
-    std::cout << "Task 1: " << ans << "\n";
+    std::cout << __FUNCTION__ << ": " << ans << "\n";
 }
 
 //---------------------------------------------------------------------------//
-void Task_2() {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ul;
 
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     do {
         ans++;
         inc ( data );
-
     } while ( 100 != flash ( data ) );
     //show ( data );
 
-    std::cout << "Task 2: " << ans << "\n";
+    std::cout << __FUNCTION__ << ": " << ans << "\n";
 }
 
 //---------------------------------------------------------------------------//

@@ -1,23 +1,24 @@
 //---------------------------------------------------------------------------//
 #include <string>
 #include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
 #include <vector>
 #include <ranges>
 #include <fstream>
-#include <limits>
+//#include <limits>
 #include <algorithm>
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_8 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+// template<class T>
+// constexpr auto Range ( T a, T b ) {
+//     return std::views::iota ( a, b );
+// }
 
 //---------------------------------------------------------------------------//
 struct Display {
@@ -58,7 +59,7 @@ auto load ( std::string file ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1() {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0;
 
     auto data = load ( "../input" );
@@ -89,7 +90,7 @@ bool contains ( const std::string& a, const std::string& b ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2() {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0;
 
     auto data = load ( "../input" );

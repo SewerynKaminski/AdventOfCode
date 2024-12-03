@@ -1,29 +1,24 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <bit>
-#include <math.h>
-#include <numeric>
-#include <algorithm>
-#include <queue>
+// #include <string>
+// #include <iostream>
+// #include <sstream>
+// #include <map>
+// #include <unordered_map>
+// #include <vector>
+// #include <ranges>
+// #include <fstream>
+// #include <limits>
+// #include <set>
+// #include <iomanip>
+// #include <bit>
+// #include <math.h>
+// #include <numeric>
+// #include <algorithm>
+// #include <queue>
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_22 {
-
-//---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
 struct Box {
@@ -37,8 +32,8 @@ struct Box {
 };
 
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::vector<Box> data;
     std::string on;
     int x1, x2, y1, y2, z1, z2;
@@ -61,10 +56,12 @@ auto load ( std::string file ) {
 
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
     std::unordered_map<uint64_t, bool> map;
-    auto data = load ( "../testinput" );
+    auto data = load ( puzzle_input
+                       //"../testinput"
+                     );
 
     for ( auto p : data ) {
         if ( p.x1 >= -50 && p.y1 >= -50 && p.z1 >= -50 &&
@@ -133,9 +130,11 @@ int64_t volume (  std::vector<Box>::iterator it, std::vector<Box>::iterator end 
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ll;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input
+                       //"../input"
+                     );
 
     for ( auto it = data.begin(), end = data.end(); it != end; it++ ) {
         if ( it->is_on ) {

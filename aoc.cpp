@@ -1,5 +1,7 @@
-#include "defines"
 #include "aoc.h"
+#include "defines"
+//#include "aoc.h"
+#include <filesystem>
 
 namespace aoc {
 //---------------------------------------------------------------------------//
@@ -25,11 +27,21 @@ void run ( ) {
     std::ifstream f;
     YEAR::Title();
     test_disable();
-    f.open ( "../input" );
+    std::string path = "../../../year";
+    path += std::string_view ( S ( YEAR ) ).substr ( 5 );
+    path += "/day";
+    path += std::string_view ( S ( DAY ) ).substr ( 4 );
+    path += "/input";
+    //f.open ( "../input" );
+    f.open ( path );
+    if ( !f.is_open() ) {
+        //std::cout << std::filesystem::current_path() << f.is_open();
+        std::cout << "Error: no input file\n";
+    }
     YEAR::DAY::Task_1 ( f );
     f.close();
     test_disable();
-    f.open ( "../input" );
+    f.open ( path );
     YEAR::DAY::Task_2 ( f );
     f.close();
 }

@@ -1,33 +1,33 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
 #include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <queue>
-#include <algorithm>
+//#include <fstream>
+//#include <limits>
+//#include <set>
+//#include <iomanip>
+//#include <queue>
+//#include <algorithm>
 
 //---------------------------------------------------------------------------//
-#include "day_15.h"
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year2021::day_15 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
+// template<class T>
+// constexpr auto Range ( T a, T b ) {
+//     return std::views::iota ( a, b );
+// }
 
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::vector<std::string> data;
 
     std::string line;
@@ -140,9 +140,11 @@ void inc ( std::vector<std::string>& d ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto data = load ( "../test2input" );
+    auto data = load ( puzzle_input
+        //"../test2input"
+        );
 
     /*for ( auto& l: data )
        std::cout << l << '\n';
@@ -155,9 +157,12 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input
+        //"../input"
+        //"../test2input"
+        );
 
     memo.clear();
     for ( auto& l : data ) {
@@ -166,6 +171,7 @@ void Task_2 ( ) {
 
     std::vector<std::string> nd;
     for ( auto i : Range ( 0, 5 ) ) {
+        (void)i;
         nd.insert ( nd.end(), data.begin(), data.end() );
         inc ( data );
     }

@@ -7,7 +7,7 @@ struct Point {
     Point ( ) : x ( 0 ), y ( 0 ) {}
     Point ( const Point& p ) : x ( p.x ), y ( p.y ) {}
     Point ( int16_t xx, int16_t yy ) : x ( xx ), y ( yy ) {}
-    Point operator < ( const Point& p ) const {
+    auto operator < ( const Point& p ) const {
         return Point ( int16_t ( x < p.x ), int16_t ( y < p.y ) );
     }
     bool operator == ( const Point p ) const {
@@ -24,12 +24,6 @@ struct Point {
     }
 
     Point& operator += ( const Point& p ) {
-        x += p.x;
-        y += p.y;
-        return *this;
-    }
-
-    Point& operator += ( const Point&& p ) {
         x += p.x;
         y += p.y;
         return *this;

@@ -1,31 +1,26 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <bit>
+// #include <string>
+// #include <iostream>
+// #include <sstream>
+// #include <map>
+// #include <unordered_map>
+// #include <vector>
+// #include <ranges>
+// #include <fstream>
+// #include <limits>
+// #include <set>
+// #include <iomanip>
+// #include <bit>
 #include <math.h>
-#include <numeric>
+// #include <numeric>
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_20 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::string line;
     std::string algo;
     std::string image;
@@ -40,7 +35,7 @@ auto load ( std::string file ) {
         image.append ( line );
     }
 
-    return std::tuple{algo, image};
+    return std::tuple { algo, image };
 }
 
 //---------------------------------------------------------------------------//
@@ -82,12 +77,14 @@ void enhance ( std::string& algo, int a, int step, bool neginput, bool negoutput
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
     std::unordered_map<uint64_t, char> data;
     std::unordered_map<uint64_t, char> ndata;
 
-    auto [algo, image] = load ( "../input" );
+    auto [algo, image] = load ( puzzle_input
+                                //"../input"
+                              );
 
     //std::cout << algo.size() << "\n";
     //std::cout << image.size() << "\n";
@@ -113,12 +110,14 @@ void Task_1 ( ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
     std::unordered_map<uint64_t, char> data;
     std::unordered_map<uint64_t, char> ndata;
 
-    auto [algo, image] = load ( "../input" );
+    auto [algo, image] = load ( puzzle_input
+                                //"../input"
+                              );
 
     int a = sqrt ( image.size() );
     for ( int y : Range ( 0, a ) ) {

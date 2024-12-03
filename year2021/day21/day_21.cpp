@@ -1,31 +1,26 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <iomanip>
-#include <bit>
-#include <math.h>
-#include <numeric>
+// #include <string>
+// #include <iostream>
+// #include <sstream>
+// #include <map>
+// #include <unordered_map>
+// #include <vector>
+// #include <ranges>
+// #include <fstream>
+// #include <limits>
+// #include <set>
+// #include <iomanip>
+// #include <bit>
+// #include <math.h>
+// #include <numeric>
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_21 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::string line;
     std::vector<int> data;
 
@@ -53,9 +48,11 @@ Player operator+ ( Player&p, int s ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input
+                       //"../input"
+                     );
 
     int die = 0;
     Player p1;
@@ -65,6 +62,7 @@ void Task_1 ( ) {
 
     auto roll_die_x3 = [&die] ( Player & p ) {
         for ( auto i : Range ( 0, 3 ) ) {
+            (void)i;
             p.pos += die + 1;
             ++die %= 100;
         }
@@ -143,9 +141,11 @@ std::tuple<uint64_t, uint64_t> play ( uint64_t turn, Player p1, Player p2 ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input
+                       //"../input"
+                     );
     Player p1;
     Player p2;
 

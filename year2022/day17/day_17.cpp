@@ -141,8 +141,12 @@ void Task_1 ( std::istream& puzzle_input ) {
     };
 
     char c;
-    int count=0;
+    int count = 0;
+    // 1536
+    // 3016
+
     while ( count < 2022 ) {
+    //while ( count < 960*2 ) {
         auto block = next_block( );
         count++;
         addEmptylevels();
@@ -190,17 +194,100 @@ void Task_2 ( std::istream & puzzle_input ) {
 
     auto& file = aoc::is_test_enabled() ? test_input ( ) : puzzle_input;
 
+    char c;
     std::string wind = getLine( file );
+    std::vector<std::string> stack {"#######"};
 
-    // 3068 tall 2022 bricks
-    // 1514285714288 tall bricks 1000000000000
-    // 200 * 7571428571 = 1514285714200
-    // T = 40 * 5 = 200
-    // 10 * 200 = 2000
-    // 15 * 200 = 3000
+    auto colide = [&stack]( uint k, std::vector<std::string>& block ) ->bool{
+        for ( uint i=0; i < block.size() ;i++ ) {
+            if ( i < k ) {
+                if ( is_collide ( stack[stack.size()-k-1+i], block[block.size()-1-i] ) ) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    };
 
-    // 3034 tall 2000 bricks
-    // 15 * 5000000000 =    75000000000
+    auto addEmptylevels = [&stack]( ){
+        auto it = stack.rbegin();
+        std::string a("#######");
+        if ( is_collide ( *it++, a ) ) {
+            stack.push_back ( "......." );
+            stack.push_back ( "......." );
+            stack.push_back ( "......." );
+            stack.push_back ( "......." );
+        } else
+        if ( is_collide ( *it++, a ) ) {
+            stack.push_back ( "......." );
+            stack.push_back ( "......." );
+            stack.push_back ( "......." );
+        } else
+        if ( is_collide ( *it++, a ) ) {
+            stack.push_back ( "......." );
+            stack.push_back ( "......." );
+        } else
+        if ( is_collide ( *it, a ) ) {
+            stack.push_back ( "......." );
+        }
+    };
+
+    auto count = 0ull;
+    while( count < 1000 ) {
+        count++;
+        //std::cout << count << "\n";
+        auto block = next_block( );
+        addEmptylevels();
+
+        uint k=0;
+        while ( !colide ( k, block ) ) {
+            c = next_wind( wind );
+            if ( c=='<' ) {
+                left ( block );
+                if ( colide ( k, block ) )
+                    right( block );
+            }
+            if ( c=='>' ) {
+                right( block );
+                if ( colide ( k, block ) )
+                    left ( block );
+            }
+            k++;
+        }
+        for ( uint l=0; l < block.size(); l++ ) {
+            for ( int i=0; i<7; i++ ) {
+                if ( block[block.size()-1-l][i]=='#' )
+                    stack[stack.size()-k+l][i] = '#';
+            }
+        }
+        while ( stack.back().find("#")==std::string::npos ) {
+            stack.pop_back();
+        }
+
+        //for ( uint n=1 ;n < stack.size()/2; n++) {
+        //if ( (stack.size()&1)==0 )
+        //for ( uint n=1 ;n < stack.size()/2; n++) {
+        for ( uint n=53 ;n < 53+1; n++) {
+            bool ok=true;
+            for( uint i=1; i<n ; i++ ) {
+                if( stack[stack.size()-i]!=stack[stack.size()-i-n] ||
+                    stack[stack.size()-i-n]!=stack[stack.size()-i-n*2] ) {
+                    ok=false;
+                    break;
+                }
+            }
+            if ( ok ) {
+                std::cout << count << " " << stack.size() << " " << n << "\n";
+            }
+        }
+    }
+
+    //show( stack );
+// 10 klockow - 53 wysokosc
+
+    ans = 1000000000000ll + stack.size() - 1;
+// 1514285714288
+// 1000000000457
     OUT ( ans );
 }
 

@@ -335,11 +335,11 @@
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
     
-  * [Day 1](year2022/day23) - Historian Hysteria :star:
+  * [Day 1](year2024/day1) - Historian Hysteria :star:
 
-  * [Day 2](year2022/day24) - Red-Nosed Reports :star:
+  * [Day 2](year2024/day2) - Red-Nosed Reports :star:
 
-  * [Day 3](year2022/day25) - Mull It Over :star:
+  * [Day 3](year2024/day3) - Mull It Over :star:
 </details>
     
 Legend

@@ -1,31 +1,25 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-#include <sstream>
-#include <map>
-#include <unordered_map>
-#include <vector>
+//#include <string>
+//#include <iostream>
+//#include <sstream>
+//#include <map>
+//#include <unordered_map>
+//#include <vector>
 #include <ranges>
-#include <fstream>
-#include <limits>
-#include <set>
-#include <algorithm>
+//#include <fstream>
+//#include <limits>
+//#include <set>
+//#include <algorithm>
 
 //---------------------------------------------------------------------------//
-#include "day_14.h"
+#include "day"
 
 //---------------------------------------------------------------------------//
-namespace aoc::year_2021::day_14 {
+namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
-template<class T>
-constexpr auto Range ( T a, T b ) {
-    return std::views::iota ( a, b );
-}
-
-//---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& fs ) {
+    //std::fstream fs ( file );
     std::unordered_map<int, char> data;
 
     std::string line, t;
@@ -40,9 +34,9 @@ auto load ( std::string file ) {
 }
 
 //---------------------------------------------------------------------------//
-void Task_1 ( ) {
+void Task_1 ( std::istream& puzzle_input ) {
     auto ans = 0;
-    auto [temp, data] = load ( "../input" );
+    auto [temp, data] = load ( puzzle_input );
 
     /*std::cout << temp << '\n';
     for ( auto [a,b,c]: data )
@@ -51,8 +45,9 @@ void Task_1 ( ) {
     std::string t = temp;
     std::string out;
     for ( auto step : Range ( 0, 10 ) ) {
+        (void)step;
         out = std::string{t[0]};
-        for ( auto i = 0; i < t.size() - 1; i++ ) {
+        for ( auto i = 0u; i < t.size() - 1; i++ ) {
             char a = t[i], b = t[i + 1], c = data[a << 8 | b];
             out = out + c + b;
         }
@@ -68,7 +63,7 @@ void Task_1 ( ) {
         return a.second < b.second;
     } );
     ans = max->second - min->second ;
-    std::cout << "Task 1: " << ans << "\n";
+    std::cout << __FUNCTION__ << ": " << ans << "\n";
 }
 
 std::unordered_map<int,
@@ -91,9 +86,9 @@ std::unordered_map<char, uint64_t> cnt ( std::unordered_map<int, char>& map, cha
 }
 
 //---------------------------------------------------------------------------//
-void Task_2 ( ) {
+void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0ull;
-    auto [temp, data] = load ( "../input" );
+    auto [temp, data] = load ( puzzle_input );
 
     ans = 0;
     std::unordered_map<char, uint64_t> zz;
@@ -114,7 +109,7 @@ void Task_2 ( ) {
     // 1715515050212 too low
     // 2884513602164 ?
     // 3945763545598 too high
-    std::cout << "Task 2: " << ans << "\n";
+    std::cout << __FUNCTION__ << ": " << ans << "\n";
 }
 
 }
