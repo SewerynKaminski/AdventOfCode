@@ -298,7 +298,7 @@ In this example, the sea cucumbers stop moving after `58` steps.
 
 Find somewhere safe to land your submarine. **What is the first step on which no sea cucumbers move?**
 
-Your puzzle answer was 598.
+Your puzzle answer was `598`.
 
 The first half of this puzzle is complete! It provides one gold star: :star:
 
@@ -315,14 +315,14 @@ Just as you start to lose hope, you notice a button on the sleigh keys: remote s
 
 The experimental antenna control console lights up again:
 
-**Energy source detected.**
+```
+Energy source detected.
+Integrating energy source from device "sleigh keys"...done.
+Installing device drivers...done.
+Recalibrating experimental antenna...done.
+Boost strength due to matching signal phase: 1 star
+```
 
-**Integrating energy source from device "sleigh keys"...done.**
+Only **49 stars** to go.
 
-**Installing device drivers...done.**
-
-**Recalibrating experimental antenna...done.**
-
-**Boost strength due to matching signal phase: 1 star**
-
-**Only 49 stars to go.**
+**Both parts of this puzzle are complete! They provide two gold stars:** :star: :star:

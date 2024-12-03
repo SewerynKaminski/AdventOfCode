@@ -210,7 +210,7 @@
   <a href="year2021">2021</a>
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
   :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-  :star: :star: :star: :star: ✩
+  :star: :star: :star: :star: :star:
  </summary>
  
   * [Day 1](year2021/day1) - Sonar Sweep :star:
@@ -257,7 +257,7 @@
   
   * [Day 22](year2021/day22) - Reactor Reboot :star:
   
-  * [Day 23](year2021/day23) - Amphipod 
+  * [Day 23](year2021/day23) - Amphipod :star:
   
   * [Day 24](year2021/day24) - Arithmetic Logic Unit :star:
   
@@ -322,6 +322,26 @@
   * [Day 25](year2022/day25) - Full of Hot Air :star:
 </details>
 
+<details><summary><a href="year2023">2023</a>
+ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+ ✩ ✩ ✩ ✩ ✩
+</summary>
+</details>
+    
+<details><summary><a href="year2024">2024</a>
+ :star: :star: :star: ✩ ✩ ✩ ✩ ✩ ✩ ✩
+ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+ ✩ ✩ ✩ ✩ ✩ 
+</summary>
+    
+  * [Day 1](year2022/day23) - Historian Hysteria :star:
+
+  * [Day 2](year2022/day24) - Red-Nosed Reports :star:
+
+  * [Day 3](year2022/day25) - Mull It Over :star:
+</details>
+    
 Legend
 - :star: - both parts
 - 🟊 - one part
