@@ -78,4 +78,5 @@ set(YEAR 2024)
 addday(${YEAR} 1)
 addday(${YEAR} 2)
 addday(${YEAR} 3)
+addday(${YEAR} 4)
 
