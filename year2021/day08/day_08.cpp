@@ -1,24 +1,8 @@
 //---------------------------------------------------------------------------//
-#include <string>
-#include <iostream>
-//#include <sstream>
-//#include <map>
-//#include <unordered_map>
-#include <vector>
-#include <ranges>
-#include <fstream>
-//#include <limits>
-#include <algorithm>
 #include "day"
 
 //---------------------------------------------------------------------------//
 namespace aoc::YEAR::DAY {
-
-//---------------------------------------------------------------------------//
-// template<class T>
-// constexpr auto Range ( T a, T b ) {
-//     return std::views::iota ( a, b );
-// }
 
 //---------------------------------------------------------------------------//
 struct Display {
@@ -27,26 +11,25 @@ struct Display {
 };
 
 //---------------------------------------------------------------------------//
-auto load ( std::string file ) {
-    std::fstream fs ( file );
+auto load ( std::istream& file ) {
     std::vector<Display> data;
 
     char c;
     std::string str;
-    while ( fs.good() ) {
+    while ( file.good() ) {
         std::vector<std::string> p;
         std::vector<std::string> o;
 
-        for ( auto i : Range ( 0, 10 ) ) {
-            if ( fs >> str ) {
+        for ( auto _ : Range ( 0, 10 ) ) {
+            if ( file >> str ) {
                 std::sort ( str.begin(), str.end() );
                 p.push_back ( str );
             }
         }
-        fs >> c;
+        file >> c;
 
-        for ( auto i : Range ( 0, 4 ) ) {
-            if ( fs >> str ) {
+        for ( auto _ : Range ( 0, 4 ) ) {
+            if ( file >> str ) {
                 std::sort ( str.begin(), str.end() );
                 o.push_back ( str );
             }
@@ -60,16 +43,16 @@ auto load ( std::string file ) {
 
 //---------------------------------------------------------------------------//
 void Task_1 ( std::istream& puzzle_input ) {
-    auto ans = 0;
+    auto ans = 0ull;
 
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     for ( auto& display : data )
         for ( auto& o : display.output )
             if ( o.length() == 2 || o.length() == 4 || o.length() == 7 || o.length() == 3 )
                 ans++;
 
-    std::cout << __FUNCTION__ << ": " << ans << "\n";
+    OUT( ans );
 }
 
 //---------------------------------------------------------------------------//
@@ -93,7 +76,7 @@ bool contains ( const std::string& a, const std::string& b ) {
 void Task_2 ( std::istream& puzzle_input ) {
     auto ans = 0;
 
-    auto data = load ( "../input" );
+    auto data = load ( puzzle_input );
 
     for ( auto& display : data ) {
         std::string digits[10];
@@ -141,7 +124,7 @@ void Task_2 ( std::istream& puzzle_input ) {
         ans += num;
     }
 
-    std::cout << __FUNCTION__ << ": " << ans << '\n';
+    OUT( ans );
 }
 
 //---------------------------------------------------------------------------//

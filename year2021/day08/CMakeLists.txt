@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.27)
 
 set(YEAR 2021)
-set(DAY 8)
+set(DAY 08)
 
 project("{YEAR}_Day_{DAY}" LANGUAGES CXX)
 
