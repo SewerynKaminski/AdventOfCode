@@ -15,4 +15,9 @@ include_directories(../..)
 add_compile_definitions(DAY=day_${DAY})
 add_compile_definitions(YEAR=year_${YEAR})
 
-add_executable(${YEAR}_day_${DAY} ../../main.cpp ../../aoc.cpp day_${DAY}.cpp input)
+add_executable(${YEAR}_day_${DAY}
+  ../../main.cpp
+  ../../aoc.cpp 
+  ${PROJECT_SOURCE_DIR}/day_${DAY}.cpp 
+  ${PROJECT_SOURCE_DIR}/input
+)
