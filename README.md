@@ -340,6 +340,8 @@
   * [Day 2](year2024/day2) - Red-Nosed Reports :star:
 
   * [Day 3](year2024/day3) - Mull It Over :star:
+  
+  * [Day 4](year2024/day4) - Ceres Search :star:
 </details>
     
 Legend
