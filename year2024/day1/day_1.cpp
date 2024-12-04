@@ -25,23 +25,18 @@ void Task_1 ( std::istream& puzzle_input ) {
     std::vector<int> left;
     std::vector<int> right;
 
-    auto l=0;
     while ( getline ( file, line ) ) {
-        //sum = line.empty() ? ( ans = std::max ( ans, sum ), 0 ) : sum + stoull ( line );
-        l++;
         auto i = line.find_first_of(' ');
         auto s1 = line.substr(0,i);
 
-        //std::cout << l << ". " << i << ' ' << line << '\n';
         i = line.find_first_not_of(' ',i);
         auto s2 = line.substr(i);
-        //std::cout << l << ". " << s1 << " "<< s2<< '\n';
 
         left.push_back( std::stoi ( s1 ) );
         right.push_back( std::stoi ( s2 ) );
     }
 
-    std::ranges::zip_view( left, right);
+    //std::ranges::zip_view( left, right);
 
     std::ranges::sort ( left, std::ranges::greater() );
     std::ranges::sort ( right, std::ranges::greater() );
@@ -70,14 +65,13 @@ void Task_2 ( std::istream& puzzle_input ) {
         auto i = line.find_first_of(' ');
         auto s1 = line.substr(0,i);
 
-        //std::cout << l << ". " << i << ' ' << line << '\n';
         i = line.find_first_not_of(' ',i);
         auto s2 = line.substr(i);
-        //std::cout << l << ". " << s1 << " "<< s2<< '\n';
 
         left.push_back( std::stoi ( s1 ) );
         right[std::stoi ( s2 )]++;
     }
+
     for ( auto l : left) {
         ans += l*right[l];
     }
