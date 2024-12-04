@@ -1,0 +1,1 @@
+/usr/bin/g++-10 -O3 -DNDEBUG CMakeFiles/2022_day_8.dir/home/seven/programy/crystal/AdventOfCode/lib/adventofcode/main.cpp.o CMakeFiles/2022_day_8.dir/home/seven/programy/crystal/AdventOfCode/lib/adventofcode/aoc.cpp.o CMakeFiles/2022_day_8.dir/day_8.cpp.o -o 2022_day_8 

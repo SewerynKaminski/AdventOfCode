@@ -1,0 +1,3 @@
+/home/seven/programy/crystal/AdventOfCode/lib/adventofcode/year2022/day20/Debug/CMakeFiles/2022_day_20.dir
+/home/seven/programy/crystal/AdventOfCode/lib/adventofcode/year2022/day20/Debug/CMakeFiles/edit_cache.dir
+/home/seven/programy/crystal/AdventOfCode/lib/adventofcode/year2022/day20/Debug/CMakeFiles/rebuild_cache.dir
