@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.27)
 
 set(YEAR 2021)
-set(DAY 9)
+set(DAY 09)
 
 project("{YEAR}_Day_{DAY}" LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_FLAGS -fmodules-ts)
 
