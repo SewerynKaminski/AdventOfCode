@@ -66,7 +66,7 @@ void Task_1 ( std::istream& puzzle_input ) {
             if ( o.length() == 2 || o.length() == 4 || o.length() == 7 || o.length() == 3 )
                 ans++;
 
-    std::cout << __FUNCTION__ << ": " << ans << '\n';
+    OUT( ans );
 }
 
 //---------------------------------------------------------------------------//
@@ -143,7 +143,7 @@ void Task_2 ( std::istream& puzzle_input ) {
         //std::cout << " == " << num << "\n";
     }
 
-    std::cout << __FUNCTION__ << ": " << ans << '\n';
+    OUT( ans );
 }
 
 //---------------------------------------------------------------------------//
