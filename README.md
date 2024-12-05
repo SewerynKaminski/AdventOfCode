@@ -330,7 +330,7 @@
 </details>
     
 <details><summary><a href="year2024">2024</a>
- :star: :star: :star: :star: ✩ ✩ ✩ ✩ ✩ ✩
+ :star: :star: :star: :star: :star: ✩ ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
@@ -342,6 +342,8 @@
   * [Day 3](year2024/day3) - Mull It Over :star:
   
   * [Day 4](year2024/day4) - Ceres Search :star:
+  
+  * [Day 5](year2024/day5) - Print Queue :star:
 </details>
     
 Legend
