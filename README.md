@@ -1,6 +1,6 @@
-![](https://img.shields.io/github/actions/workflow/status/SewerynKaminski/AdventOfCode/cmake.yml)
 
-# Advent Of Code
+
+# Advent Of Code ![GIT](https://img.shields.io/github/actions/workflow/status/SewerynKaminski/AdventOfCode/cmake.yml)
 <details>
     <summary>
         <a href="year2015">2015</a> 
