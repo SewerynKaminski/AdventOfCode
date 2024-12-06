@@ -335,17 +335,17 @@
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
     
-  * [Day 1](year2024/day1) - Historian Hysteria :star:
+  * [Day 1](year2024/day01) - Historian Hysteria :star:
 
-  * [Day 2](year2024/day2) - Red-Nosed Reports :star:
+  * [Day 2](year2024/day02) - Red-Nosed Reports :star:
 
-  * [Day 3](year2024/day3) - Mull It Over :star:
+  * [Day 3](year2024/day03) - Mull It Over :star:
   
-  * [Day 4](year2024/day4) - Ceres Search :star:
+  * [Day 4](year2024/day04) - Ceres Search :star:
   
-  * [Day 5](year2024/day5) - Print Queue :star:
+  * [Day 5](year2024/day05) - Print Queue :star:
   
-  * [Day 6](year2024/day6) - Guard Gallivant :star:
+  * [Day 6](year2024/day06) - Guard Gallivant :star:
 </details>
     
 Legend
