@@ -1,3 +1,5 @@
+![](https://img.shields.io/github/actions/workflow/status/SewerynKaminski/AdventOfCode/cmake.yml)
+
 # Advent Of Code
 <details>
     <summary>
