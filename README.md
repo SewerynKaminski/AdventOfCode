@@ -213,17 +213,17 @@
   :star: :star: :star: :star: :star:
  </summary>
  
-  * [Day 1](year2021/day1) - Sonar Sweep :star:
+  * [Day 1](year2021/day01) - Sonar Sweep :star:
   
-  * [Day 2](year2021/day2) - Dive! :star:
+  * [Day 2](year2021/day02) - Dive! :star:
   
-  * [Day 3](year2021/day3) - Binary Diagnostic :star:
+  * [Day 3](year2021/day03) - Binary Diagnostic :star:
   
-  * [Day 4](year2021/day4) - Giant Squid :star:
+  * [Day 4](year2021/day04) - Giant Squid :star:
   
-  * [Day 5](year2021/day5) - Hydrothermal Venture :star:
+  * [Day 5](year2021/day05) - Hydrothermal Venture :star:
   
-  * [Day 6](year2021/day6) - Lanternfish :star:
+  * [Day 6](year2021/day06) - Lanternfish :star:
   
   * [Day 7](year2021/day07) - The Treachery of Whales :star:
   
