@@ -330,7 +330,7 @@
 </details>
     
 <details><summary><a href="year2024">2024</a>
- :star: :star: :star: :star: :star: ✩ ✩ ✩ ✩ ✩
+ :star: :star: :star: :star: :star: :star: ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
@@ -344,6 +344,8 @@
   * [Day 4](year2024/day4) - Ceres Search :star:
   
   * [Day 5](year2024/day5) - Print Queue :star:
+  
+  * [Day 6](year2024/day6) - Guard Gallivant :star:
 </details>
     
 Legend
