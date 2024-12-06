@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.29)
 
-set(YEAR 2022)
-set(DAY 6)
+set(YEAR 2024)
+set(DAY 06)
 
 project("${YEAR} Day ${DAY}" LANGUAGES CXX)
 
@@ -11,7 +11,7 @@ add_compile_definitions(YEAR=year_${YEAR})
 include_directories(..)
 include_directories(../..)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(${YEAR}_day_${DAY} ../../main.cpp ../../aoc.cpp day_${DAY}.cpp input)
