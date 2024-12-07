@@ -19,6 +19,10 @@ endfunction()
 
 add_custom_target(AoC SOURCES README.md)
 
+set(YEAR 2018)
+addday(01)
+addday(02)
+
 set(YEAR 2021)
 #add_subdirectory(./year${YEAR}/day${DAY}/ ./year${YEAR}/day${DAY}/build )
 #ExternalProject_Add(${YEAR}_day_${DAY}
@@ -86,4 +90,5 @@ addday(03)
 addday(04)
 addday(05)
 addday(06)
+addday(07)
 
