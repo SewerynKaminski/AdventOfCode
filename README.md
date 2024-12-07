@@ -332,7 +332,7 @@
 </details>
     
 <details><summary><a href="year2024">2024</a>
- :star: :star: :star: :star: :star: :star: ✩ ✩ ✩ ✩
+ :star: :star: :star: :star: :star: :star: :star: ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
@@ -348,6 +348,8 @@
   * [Day 5](year2024/day05) - Print Queue :star:
   
   * [Day 6](year2024/day06) - Guard Gallivant :star:
+
+  * [Day 6](year2024/day06) - Bridge Repair :star:
 </details>
     
 Legend
