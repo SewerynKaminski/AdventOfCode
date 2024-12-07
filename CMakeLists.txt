@@ -22,6 +22,7 @@ add_custom_target(AoC SOURCES README.md)
 set(YEAR 2018)
 addday(01)
 addday(02)
+addday(03)
 
 set(YEAR 2021)
 #add_subdirectory(./year${YEAR}/day${DAY}/ ./year${YEAR}/day${DAY}/build )
