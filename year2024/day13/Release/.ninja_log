@@ -1,7 +1,0 @@
-# ninja log v5
-0	286	1670950904642161158	CMakeFiles/2022_day_13.dir/home/seven/programy/crystal/AdventOfCode/lib/adventofcode/aoc.cpp.o	4b3d9da725f42652
-0	420	1670950904774161825	CMakeFiles/2022_day_13.dir/home/seven/programy/crystal/AdventOfCode/lib/adventofcode/main.cpp.o	90f5345fc3da66b1
-1	875	1671047853708405787	CMakeFiles/2022_day_13.dir/day_13.cpp.o	c29742c6955d54a8
-875	909	1671047853744405977	2022_day_13	c6cb0d5a8e09d9b0
-0	895	1671047857168423922	CMakeFiles/2022_day_13.dir/day_13.cpp.o	c29742c6955d54a8
-895	928	1671047857204424111	2022_day_13	c6cb0d5a8e09d9b0
