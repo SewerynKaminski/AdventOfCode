@@ -349,7 +349,7 @@
   
   * [Day 6](year2024/day06) - Guard Gallivant :star:
 
-  * [Day 6](year2024/day06) - Bridge Repair :star:
+  * [Day 7](year2024/day07) - Bridge Repair :star:
 </details>
     
 Legend
