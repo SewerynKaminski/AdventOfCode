@@ -86,12 +86,11 @@
         ✩ ✩ ✩ ✩ ✩
     </summary>
     
-    * [Day 1](year2018/day01) - Chronal Calibration :star:
+ * [Day 1](year2018/day01) - Chronal Calibration :star:
     
-    * [Day 2](year2018/day02) - Inventory Management System :star:
+ * [Day 2](year2018/day02) - Inventory Management System :star:
       
-    * [Day 3](year2018/day03) - No Matter How You Slice It :star:
-
+ * [Day 3](year2018/day03) - No Matter How You Slice It :star:
 </details>
 
 <details>
