@@ -19,8 +19,8 @@
 #include "aoc.h"
 #include "defines"
 
-#define OUT(a) std::cout << __FUNCTION__ << ( aoc::is_test_enabled() ? "(TEST)" : "" ) << ": " << a << "\n";
-#define Range std::views::iota
+#define OUT(a) ::std::cout << __FUNCTION__ << ( aoc::is_test_enabled() ? "(TEST)" : "" ) << ": " << a << "\n";
+#define Range ::std::views::iota
 
 namespace aoc::YEAR {
 void Title();

@@ -338,7 +338,7 @@
 </details>
     
 <details><summary><a href="year2024">2024</a>
- :star: :star: :star: :star: :star: :star: :star: ✩ ✩ ✩
+ :star: :star: :star: :star: :star: :star: :star: :star: ✩ ✩
  ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
@@ -356,6 +356,8 @@
   * [Day 6](year2024/day06) - Guard Gallivant :star:
 
   * [Day 7](year2024/day07) - Bridge Repair :star:
+  
+  * [Day 8](year2024/day08) - Resonant Collinearity :star:
 </details>
     
 Legend
