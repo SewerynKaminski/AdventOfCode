@@ -9,22 +9,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(.)
 
-#function (addday YEAR DAY)
-#    add_subdirectory(./year${YEAR}/day${DAY}/ )
-#endfunction()
-
 function (addday DAY)
     add_subdirectory(./year${YEAR}/day${DAY}/ )
 endfunction()
 
 add_custom_target(AoC SOURCES README.md)
-
-set(YEAR 2018)
-addday(01)
-addday(02)
-addday(03)
-
-set(YEAR 2021)
 #add_subdirectory(./year${YEAR}/day${DAY}/ ./year${YEAR}/day${DAY}/build )
 #ExternalProject_Add(${YEAR}_day_${DAY}
 #	SOURCE_DIR ./year${YEAR}/day${DAY}/
@@ -32,6 +21,16 @@ set(YEAR 2021)
 #	SOURCE_SUBDIR ../../../year${YEAR}/day${DAY}/
 #	INSTALL_COMMAND ""
 #)
+
+#===============================================================================
+set(YEAR 2018)
+addday(01)
+addday(02)
+addday(03)
+addday(04)
+
+#===============================================================================
+set(YEAR 2021)
 addday(01)
 addday(02)
 addday(03)
@@ -58,6 +57,7 @@ addday(11)
 #addday(24)
 #addday(25)
 
+#===============================================================================
 set(YEAR 2022)
 addday(1)
 addday(2)
@@ -82,8 +82,10 @@ addday(18)
 #addday(21)
 #addday(22)
 
-# set(YEAR 2023)
+#===============================================================================
+set(YEAR 2023)
 
+#===============================================================================
 set(YEAR 2024)
 addday(01)
 addday(02)
@@ -93,3 +95,5 @@ addday(05)
 addday(06)
 addday(07)
 addday(08)
+addday(09)
+#===============================================================================
