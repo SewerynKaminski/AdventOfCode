@@ -338,7 +338,7 @@
 </details>
     
 <details><summary><a href="year2024">2024</a>
- :star: :star: :star: :star: :star: :star: :star: :star: :star: ✩
+ :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
  ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
@@ -360,6 +360,8 @@
   * [Day 8](year2024/day08) - Resonant Collinearity :star:
   
   * [Day 9](year2024/day09) - Disk Fragmenter :star:
+  
+  * [Day 10](year2024/day10) - Hoof It :star:
 </details>
     
 Legend
