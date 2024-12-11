@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.29)
 
 set(YEAR 2024)
 
@@ -12,3 +12,4 @@ add_subdirectory(day07)
 add_subdirectory(day08)
 add_subdirectory(day09)
 add_subdirectory(day10)
+add_subdirectory(day11)

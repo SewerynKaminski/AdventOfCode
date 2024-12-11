@@ -339,7 +339,7 @@
     
 <details><summary><a href="year2024">2024</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+ :star: ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
     
@@ -362,6 +362,8 @@
   * [Day 9](year2024/day09) - Disk Fragmenter :star:
   
   * [Day 10](year2024/day10) - Hoof It :star:
+  
+  * [Day 11](year2024/day11) - Plutonian Pebbles :star:
 </details>
     
 Legend
