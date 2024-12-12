@@ -22,6 +22,8 @@ add_custom_target(AoC SOURCES README.md)
 #	INSTALL_COMMAND ""
 #)
 
+add_subdirectory( year2016 )
+
 add_subdirectory( year2018 )
 #add_subdirectory( year2019 )
 #add_subdirectory( year2020 )
