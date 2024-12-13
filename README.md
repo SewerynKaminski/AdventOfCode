@@ -64,7 +64,7 @@
     <summary>
         <a href="year2016">2016</a>
         :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-        :star: ✩      ✩       ✩      ✩      ✩      ✩      ✩        ✩     ✩
+        :star: :star: :star: ✩      ✩      ✩      ✩      ✩        ✩     ✩
         ✩ ✩ ✩ ✩ ✩
     </summary>
 </details>
@@ -81,9 +81,9 @@
 <details>
     <summary>
         <a href="year2018">2018</a>
-        :star: :star: :star: ✩ ✩ ✩ ✩ ✩ ✩ ✩
-        ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
-        ✩ ✩ ✩ ✩ ✩
+        :star: :star: :star: ✩     ✩     ✩     ✩     ✩     ✩     ✩
+        ✩      ✩      ✩      ✩     ✩     ✩     ✩     ✩     ✩     ✩
+        ✩      ✩      ✩      ✩     ✩
     </summary>
     
  * [Day 1](year2018/day01) - Chronal Calibration :star:
