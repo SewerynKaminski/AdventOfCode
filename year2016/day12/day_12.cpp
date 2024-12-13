@@ -2,26 +2,17 @@
 #include <cmath>
 
 //---------------------------------------------------------------------------//
-struct P{
-    int x, y;
-    size_t hash() const { return ((size_t)y<<32) | x;}
-    P operator+(const P& o) const { return {x+o.x,y+o.y};}
-    bool operator==(const P& o) const { return x==o.x && y==o.y; }
-};
-
-//---------------------------------------------------------------------------//
-template<>
-struct std::hash<P>{
-    size_t operator()(const P& p) const { return p.hash(); }
-};
-
-//---------------------------------------------------------------------------//
 namespace aoc::YEAR::DAY {
 
 //---------------------------------------------------------------------------//
 // Test data
 std::string testinput (
-R"(10
+R"(cpy 41 a
+inc a
+inc a
+dec a
+jnz a 2
+dec a
 )");
 
 //---------------------------------------------------------------------------//
@@ -32,14 +23,11 @@ inline std::istream& test_input() {
 
 //---------------------------------------------------------------------------//
 auto load( std::istream& file ) {
-    size_t ret;
-    file >> ret;
+    ::std::vector<::std::string> ret;
+    ::std::string line;
+    while ( ::std::getline(file, line) )
+        ret.push_back ( line );
     return ret;
-}
-
-//---------------------------------------------------------------------------//
-bool is_wall( size_t fav, int x, int y ) {
-    return std::popcount(x*x + 3*x + 2*x*y + y + y*y + fav)&1;
 }
 
 //---------------------------------------------------------------------------//
@@ -49,43 +37,46 @@ void Task_1 ( ::std::istream& puzzle_input ) {
     //aoc::test_enable();
 
     auto& file = aoc::is_test_enabled() ? test_input() : puzzle_input;
-    auto favorite_number = load( file );
+    auto data = load( file );
 
-    ::std::vector<P> pos{ {1,1} };
-
-    const P end = aoc::is_test_enabled()?P{7,4}:P{31,39};
-
-    std::unordered_set<P> visited;
-    visited.insert({1,1});
-    auto ok = true;
-    while ( ok ) {
-        std::vector<P> new_pos;
-        while ( !pos.empty() ) {
-            auto check = [favorite_number,&visited,&new_pos](const P& p){
-                if ( !is_wall ( favorite_number, p.x, p.y ) && !visited.contains(p) ) {
-                    visited.insert ( p );
-                    new_pos.push_back ( p );
-                }
-            };
-
-            auto p = pos.back();
-            if ( p == end ) {
-                ok=false;
-                break;
+    uint ip=0;
+    ::std::map<char,int64_t> regs;
+    while ( ip < data.size() ) {
+        const std::string& ins = data[ip];
+        if ( ins.starts_with("cpy ") ) {
+            auto idx = ins.find ( ' ', 4 )+1; // to
+            auto a = ins.substr ( 4, idx-5 ); // from
+            if ( std::isdigit(ins[4]) ) {
+                regs[ ins[idx] ] = stoi(a);
+            } else {
+                regs[ ins[idx] ] = regs[ a[0] ];
             }
-
-            if ( p.x > 0 ) check ( p + P{-1,0} );
-            check ( p + P{1,0} );
-            if ( p.y > 0 ) check ( p + P{0,-1} );
-            check ( p + P{0,1} );
-
-            pos.pop_back();
+            ip++;
+        } else
+        if ( ins.starts_with("inc ") ) {
+            regs[ ins[4] ]++;
+            ip++;
+        } else
+        if ( ins.starts_with("dec ") ) {
+            regs[ ins[4] ]--;
+            ip++;
+        } else
+        if ( ins.starts_with("jnz ") ) {
+            auto idx = ins.find ( ' ', 4 )+1; // ofs
+            auto a = ins.substr ( 4, idx-5 ); // cond
+            auto ofs = stoi( ins.substr(idx) );
+            if ( std::isdigit(ins[4]) ) {
+                if ( stoi(a) ) ip+= ofs-1;
+            } else {
+                if ( regs[ a[0] ] ) ip+= ofs-1;
+            }
+            ip++;
         }
-        pos = std::move ( new_pos );
-        ans++;
     }
 
-    OUT ( ans-1 );
+    ans = regs['a'];
+
+    OUT ( ans );
 }
 
 //---------------------------------------------------------------------------//
@@ -95,35 +86,45 @@ void Task_2 ( ::std::istream& puzzle_input ) {
     //aoc::test_enable();
 
     auto& file = aoc::is_test_enabled() ? test_input() : puzzle_input;
-    auto favorite_number = load ( file );
+    auto data = load ( file );
 
-    ::std::vector<P> pos{ {1,1} };
-
-    std::unordered_set<P> visited;
-    visited.insert({1,1});
-    auto steps = 0ull;
-    while ( steps < 50 ) {
-        std::vector<P> new_pos;
-        while ( !pos.empty() ) {
-            auto check = [favorite_number,&visited,&new_pos](const P& p){
-                if ( !is_wall ( favorite_number, p.x, p.y ) && !visited.contains(p) ) {
-                    visited.insert ( p );
-                    new_pos.push_back ( p );
-                }
-            };
-
-            auto p = pos.back();
-            if ( p.x > 0 ) check ( p + P{-1,0} );
-            check ( p + P{1,0} );
-            if ( p.y > 0 ) check ( p + P{0,-1} );
-            check ( p + P{0,1} );
-
-            pos.pop_back();
-        }
-        pos = std::move ( new_pos );
-        steps++;
+    uint ip=0;
+    ::std::map<char,int64_t> regs;
+    regs['c']=1;
+    while ( ip < data.size() ) {
+        const std::string& ins = data[ip];
+        if ( ins.starts_with("cpy ") ) {
+            auto idx = ins.find ( ' ', 4 )+1; // to
+            auto a = ins.substr ( 4, idx-5 ); // from
+            if ( std::isdigit(ins[4]) ) {
+                regs[ ins[idx] ] = stoi(a);
+            } else {
+                regs[ ins[idx] ] = regs[ a[0] ];
+            }
+            ip++;
+        } else
+            if ( ins.starts_with("inc ") ) {
+                regs[ ins[4] ]++;
+                ip++;
+            } else
+                if ( ins.starts_with("dec ") ) {
+                    regs[ ins[4] ]--;
+                    ip++;
+                } else
+                    if ( ins.starts_with("jnz ") ) {
+                        auto idx = ins.find ( ' ', 4 )+1; // ofs
+                        auto a = ins.substr ( 4, idx-5 ); // cond
+                        auto ofs = stoi( ins.substr(idx) );
+                        if ( std::isdigit(ins[4]) ) {
+                            if ( stoi(a) ) ip+= ofs-1;
+                        } else {
+                            if ( regs[ a[0] ] ) ip+= ofs-1;
+                        }
+                        ip++;
+                    }
     }
-    ans = visited.size();
+
+    ans = regs['a'];
 
     OUT ( ans );
 }
