@@ -1,9 +1,5 @@
 #include "day"
-#include <cmath>
-#include <climits>
-#include <format>
-#include <unistd.h>
-#include <termios.h>
+
 //---------------------------------------------------------------------------//
 namespace aoc::YEAR::DAY {
 
@@ -108,12 +104,12 @@ void Task_1 ( ::std::istream& puzzle_input ) {
 }
 
 //---------------------------------------------------------------------------//
-void enableRawMode() {
+/*void enableRawMode() {
     struct termios raw;
     tcgetattr(STDIN_FILENO, &raw);
     raw.c_lflag &= ~(ECHO| ICANON);
     tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
-}
+}*/
 
 //---------------------------------------------------------------------------//
 void Task_2 ( ::std::istream& puzzle_input ) {
