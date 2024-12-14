@@ -339,7 +339,7 @@
     
 <details><summary><a href="year2024">2024</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star: :star: ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
+ :star: :star: :star: :star: ✩      ✩      ✩      ✩      ✩      ✩
  ✩ ✩ ✩ ✩ ✩ 
 </summary>
     
@@ -366,6 +366,10 @@
   * [Day 11](year2024/day11) - Plutonian Pebbles :star:
   
   * [Day 12](year2024/day12) - Garden Groups :star:
+  
+  * [Day 13](year2024/day13) - Claw Contraption :star:
+  
+  * [Day 14](year2024/day14) - Restroom Redoubt :star:
 </details>
     
 Legend
