@@ -339,8 +339,8 @@
     
 <details><summary><a href="year2024">2024</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star: :star: :star: :star: ✩      ✩      ✩      ✩      ✩      ✩
- ✩ ✩ ✩ ✩ ✩ 
+ :star: :star: :star: :star: :star: ✩      ✩      ✩      ✩      ✩
+ ✩      ✩      ✩      ✩      ✩
 </summary>
     
   * [Day 1](year2024/day01) - Historian Hysteria :star:
@@ -370,6 +370,8 @@
   * [Day 13](year2024/day13) - Claw Contraption :star:
   
   * [Day 14](year2024/day14) - Restroom Redoubt :star:
+  
+  * [Day 15](year2024/day15) - Warehouse Woes :star:
 </details>
     
 Legend
