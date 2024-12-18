@@ -376,6 +376,8 @@
   * [Day 16](year2024/day16) - Reindeer Maze
   
   * [Day 17](year2024/day17) - Chronospatial Computer :star:
+  
+  * [Day 18](year2024/day18) - RAM Run :star:  
 </details>
     
 Legend
