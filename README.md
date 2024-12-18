@@ -372,6 +372,10 @@
   * [Day 14](year2024/day14) - Restroom Redoubt :star:
   
   * [Day 15](year2024/day15) - Warehouse Woes :star:
+  
+  * [Day 16](year2024/day16) - Reindeer Maze
+  
+  * [Day 17](year2024/day17) - Chronospatial Computer :star:
 </details>
     
 Legend

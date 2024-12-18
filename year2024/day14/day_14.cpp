@@ -36,9 +36,10 @@ struct P {
         x*=o;
         y*=o;
     }
-    P operator *( const int64_t o ) {
-        return {x*o, y*o};
-    }
+    P operator *( const int64_t o ) { return { x * o, y * o }; }
+    P operator /(const int64_t o ) { return { x / o, y / o }; }
+    P operator -( const P& o ) const { return { x - o.x, y - o.y }; }
+    int64_t len_squared() const { return x * x + y * y; }
 };
 
 //---------------------------------------------------------------------------//
@@ -111,6 +112,29 @@ void Task_1 ( ::std::istream& puzzle_input ) {
     tcsetattr(STDIN_FILENO, TCSAFLUSH, &raw);
 }*/
 
+struct PD{
+    double x,y;
+};
+
+P sr ( const ::std::vector<Guard>& guard ) {
+    P p{0,0};
+    for ( const auto& g: guard ) {
+        p.x += g.p.x;
+        p.y += g.p.y;
+    }
+    return { p.x / (int64_t)guard.size(), p.y / (int64_t)guard.size() };
+}
+
+int64_t var ( const ::std::vector<Guard>& guard ) {
+    auto s = sr ( guard );
+    int64_t sum = 0;
+    for ( const auto& g : guard ) {
+        auto d = s-g.p;
+        sum += d.len_squared();
+    }
+    return sum / guard.size();
+}
+
 //---------------------------------------------------------------------------//
 void Task_2 ( ::std::istream& puzzle_input ) {
     int64_t ans = 0;
@@ -126,6 +150,7 @@ void Task_2 ( ::std::istream& puzzle_input ) {
 
     //enableRawMode();
 
+    auto v = var(data)/2;
     bool search=true;
     while ( search ) {
         ans++;
@@ -141,13 +166,18 @@ void Task_2 ( ::std::istream& puzzle_input ) {
             tab[g.p.y][g.p.x] = '*';
         }
 
-        for ( const auto& l : tab ) {
+        if ( var( data ) < v ) {
+            for ( const auto& l : tab ) std::cout << l <<'\n';
+            search = false;
+        }
+
+        /*for ( const auto& l : tab ) {
             if ( l.find ( std::string{"*******************************"},0)!=std::string::npos ) {
                 search = false;
                 for ( const auto& l : tab ) std::cout << l <<'\n';
                 break;
             }
-        }
+        }*/
 
         /*char c;
         std::cout << ans <<'\n';
