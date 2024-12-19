@@ -377,7 +377,9 @@
   
   * [Day 17](year2024/day17) - Chronospatial Computer :star:
   
-  * [Day 18](year2024/day18) - RAM Run :star:  
+  * [Day 18](year2024/day18) - RAM Run :star:
+  
+  * [Day 19](year2024/day19) - Linen Layout :star:
 </details>
     
 Legend
