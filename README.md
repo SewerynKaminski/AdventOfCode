@@ -339,7 +339,7 @@
     
 <details><summary><a href="year2024">2024</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star: :star: :star: :star: :star: :star: :star: :star: 🟊      ✩
+ :star: :star: :star: :star: :star: :star: :star: :star: :star:  🟊
  ✩      ✩      ✩      ✩      ✩
 </summary>
     
@@ -380,6 +380,8 @@
   * [Day 18](year2024/day18) - RAM Run :star:
   
   * [Day 19](year2024/day19) - Linen Layout :star:
+  
+  * [Day 20](year2024/day20) - Race Condition :star:
 </details>
     
 Legend
