@@ -80,10 +80,10 @@
 
 <details>
     <summary>
-        <a href="year2018">2018</a>
-        :star: :star: :star: ✩     ✩     ✩     ✩     ✩     ✩     ✩
-        ✩      ✩      ✩      ✩     ✩     ✩     ✩     ✩     ✩     ✩
-        ✩      ✩      ✩      ✩     ✩
+    <a href="year2018">2018</a>
+    :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+    ✩      ✩      ✩      ✩      ✩      ✩      ✩      ✩      ✩      ✩
+    ✩      ✩      ✩      ✩      ✩
     </summary>
     
  * [Day 1](year2018/day01) - Chronal Calibration :star:
@@ -97,8 +97,8 @@
  <summary>
   <a href="year2019">2019</a>
    :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
-   :star: :star: :star: :star: :star: :star: :star: :star: 🟊 🟊 🟊 
-    🟊  ✩ ✩ ✩ ✩
+   :star: :star: :star: :star: :star: :star: :star: :star: 🟊      🟊 
+   🟊      ✩      ✩      ✩      ✩
  </summary>
  
 * [Day 1](year2019/day1) - The Tyranny of the Rocket Equation :star:
@@ -276,7 +276,7 @@
 <details><summary><a href="year2022">2022</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star: :star: 🟊 🟊 🟊
+ 🟊     🟊     🟊      🟊     ✩
 </summary>
 
   * [Day 1](year2022/day1) - Calorie Counting :star:
@@ -331,9 +331,9 @@
 </details>
 
 <details><summary><a href="year2023">2023</a>
- ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
- ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩ ✩
- ✩ ✩ ✩ ✩ ✩
+ :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
+ :star: :star: :star: :star: :star: :star: 🟊 🟊 🟊 🟊
+ 🟊 ✩ ✩ ✩ ✩
 </summary>
 </details>
     
