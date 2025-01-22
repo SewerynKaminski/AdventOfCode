@@ -339,7 +339,7 @@
     
 <details><summary><a href="year2024">2024</a>
  :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
- :star: :star: :star: :star: :star: :star: :star: :star: :star:  🟊
+ :star: :star: :star: :star: :star: :star: :star: :star: :star: :star:
  ✩      ✩      ✩      ✩      ✩
 </summary>
     
@@ -373,7 +373,7 @@
   
   * [Day 15](year2024/day15) - Warehouse Woes :star:
   
-  * [Day 16](year2024/day16) - Reindeer Maze
+  * [Day 16](year2024/day16) - Reindeer Maze :star:
   
   * [Day 17](year2024/day17) - Chronospatial Computer :star:
   
