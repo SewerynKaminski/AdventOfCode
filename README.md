@@ -387,6 +387,11 @@
   
   * [Day 22](year2024/day22) - Monkey Market :star:
   
+  * [Day 23](year2024/day23) - Monkey Market 🟊
+  
+  * [Day 24](year2024/day24) - Crossed Wires 🟊
+  
+  * [Day 25](year2024/day25) - Code Chronicle 🟊
 </details>
     
 Legend
