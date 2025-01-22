@@ -382,6 +382,11 @@
   * [Day 19](year2024/day19) - Linen Layout :star:
   
   * [Day 20](year2024/day20) - Race Condition :star:
+  
+  * [Day 21](year2024/day21) - Keypad Conundrum 
+  
+  * [Day 22](year2024/day22) - Monkey Market :star:
+  
 </details>
     
 Legend
